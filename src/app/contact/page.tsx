@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Github, Linkedin, MapPin } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
@@ -17,58 +17,12 @@ export default function ContactPage() {
         <div className="space-y-4 text-center">
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Get In Touch</h1>
           <p className="mx-auto max-w-[700px] text-base text-muted-foreground sm:text-lg">
-            Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
+            Have a project in mind or want to discuss potential opportunities ? I'd love to hear from you.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
           <div className="space-y-6">
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">Contact Information</CardTitle>
-                <CardDescription className="text-sm sm:text-base">
-                  Feel free to reach out through any of these channels
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4 px-4 pb-4 sm:px-6 sm:pb-5">
-                <div className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-5 w-5 text-muted-foreground" />
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <a 
-                      href="mailto:Ethan@smadja.biz" 
-                      className="text-sm text-muted-foreground hover:text-foreground"
-                    >
-                      Ethan@smadja.biz
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-5 w-5 text-muted-foreground" />
-                  <div>
-                    <h3 className="font-medium">Phone</h3>
-                    <a 
-                      href="tel:+33621801615" 
-                      className="text-sm text-muted-foreground hover:text-foreground"
-                    >
-                      +33 6 21 80 16 15
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-5 w-5 text-muted-foreground" />
-                  <div>
-                    <h3 className="font-medium">Location</h3>
-                    <p className="text-sm text-muted-foreground">
-                      34 boulevard Georges Clemenceau, 92400 Courbevoie, France
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             <Card>
               <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
                 <CardTitle className="text-lg sm:text-xl">Connect</CardTitle>
@@ -104,6 +58,16 @@ export default function ContactPage() {
                     >
                       linkedin.com/in/ethan-smadja
                     </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-5 w-5 text-muted-foreground" />
+                  <div>
+                    <h3 className="font-medium">Location</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Paris Region, France
+                    </p>
                   </div>
                 </div>
               </CardContent>
