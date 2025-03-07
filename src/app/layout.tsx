@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
 import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -68,6 +69,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

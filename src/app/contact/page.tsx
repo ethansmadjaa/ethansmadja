@@ -1,16 +1,79 @@
+'use client';
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, MapPin } from "lucide-react"
 import Link from "next/link"
-
-export const metadata = {
-  title: "Contact - Ethan Smadja",
-  description: "Get in touch with Ethan Smadja for collaboration, job opportunities, or general inquiries.",
-}
+import { useState } from "react"
+import { useToast } from "@/hooks/use-toast"
 
 export default function ContactPage() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        
+        // Reset the form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: data.message || "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="container px-4 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="mx-auto max-w-4xl space-y-8">
@@ -82,19 +145,32 @@ export default function ContactPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="px-4 pb-4 sm:px-6 sm:pb-5">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
                       Name
                     </label>
-                    <Input id="name" placeholder="Your name" required />
+                    <Input 
+                      id="name" 
+                      placeholder="Your name" 
+                      required 
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Email
                     </label>
-                    <Input id="email" type="email" placeholder="Your email" required />
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="Your email" 
+                      required 
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
                   </div>
                 </div>
                 
@@ -102,7 +178,13 @@ export default function ContactPage() {
                   <label htmlFor="subject" className="text-sm font-medium">
                     Subject
                   </label>
-                  <Input id="subject" placeholder="What is this regarding?" required />
+                  <Input 
+                    id="subject" 
+                    placeholder="What is this regarding?" 
+                    required 
+                    value={formData.subject}
+                    onChange={handleChange}
+                  />
                 </div>
                 
                 <div className="space-y-2">
@@ -114,11 +196,17 @@ export default function ContactPage() {
                     placeholder="Your message" 
                     rows={5} 
                     required 
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                 </div>
                 
-                <Button type="submit" className="w-full sm:w-auto text-white bg-primary">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full sm:w-auto text-white bg-primary"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
