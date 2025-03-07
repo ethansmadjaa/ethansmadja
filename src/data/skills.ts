@@ -73,7 +73,7 @@ export const skills: Skill[] = [
       "Team Management",
       "Event Planning",
       "Teaching",
-      "Community Service (BAFA Certified)",
+      "Community Service",
       "Project Management",
       "Problem Solving"
     ]

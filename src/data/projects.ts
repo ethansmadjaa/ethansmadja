@@ -72,7 +72,7 @@ export const projects: Project[] = [
     description: "Medical appointment booking system",
     longDescription: "A Java-based medical appointment booking system inspired by Doctolib, developed as part of an ECE course project.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=450&fit=crop",
-    technologies: ["Java", "SQL", "JDBC", "Object-Oriented Programming"],
+    technologies: ["Java", "SQL", "JDBC", "OOP"],
     githubUrl: "https://github.com/ethansmadjaa/DoctoLibECE"
   }
 ]; 
