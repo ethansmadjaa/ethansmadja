@@ -10,7 +10,7 @@ export default function Home() {
       <section className="container flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-4 px-4 pb-8 pt-24 md:min-h-screen md:pb-12 md:pt-32 lg:py-0">
         <div className="flex flex-col items-center gap-4">
           <Image
-            src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop"
+            src="/profile.jpg"
             alt="Ethan Smadja"
             width={150}
             height={150}
