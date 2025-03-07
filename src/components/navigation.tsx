@@ -34,7 +34,7 @@ export function Navigation() {
               key={item.name}
               href={item.href}
               className={cn(
-                "text-sm transition-colors hover:text-foreground/80",
+                "text-sm md:text-base transition-colors hover:text-foreground/80",
                 pathname === item.href ? "text-foreground" : "text-foreground/60"
               )}
             >
@@ -90,7 +90,7 @@ export function Navigation() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "block py-2 text-base",
+                  "block py-2 text-base md:text-lg",
                   pathname === item.href ? "text-foreground font-medium" : "text-foreground/60"
                 )}
                 onClick={() => setMobileMenuOpen(false)}

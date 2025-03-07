@@ -23,10 +23,10 @@ export default function AboutPage() {
     <div className="container max-w-4xl px-4 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="space-y-8">
         <div className="space-y-4">
-          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             About Me
           </h1>
-          <p className="text-lg text-muted-foreground sm:text-xl">
+          <p className="text-xl text-muted-foreground sm:text-2xl">
             Data & AI Student interested in Software Engineering and new
             technologies.
           </p>
@@ -34,13 +34,13 @@ export default function AboutPage() {
 
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div className="order-2 space-y-4 md:order-1">
-            <p className="text-sm sm:text-base">
+            <p className="text-base sm:text-lg">
               Hello! I'm Ethan, a passionate student pursuing a Master's in Data
               & AI at ECE Paris. Currently based in Paris, I'm dedicated to
               creating innovative solutions using nowadays technologies and
               different programming languages.
             </p>
-            <p className="text-sm sm:text-base">
+            <p className="text-base sm:text-lg">
               My journey in technology began with my studies at ECE Paris, where
               I developed a strong foundation in mathematics (statistics,
               probability, linear algebra), programming (C, Python, Java), and
@@ -50,7 +50,7 @@ export default function AboutPage() {
               recognition system using MATLAB that could identify individuals
               from a database of 500 images.
             </p>
-            <p className="text-sm sm:text-base">
+            <p className="text-base sm:text-lg">
               Beyond my technical pursuits, I'm actively involved in community
               service as a Director at Moadon, where I organize activities for
               youth (ages 8-17) and manage teams of animators. I'm also

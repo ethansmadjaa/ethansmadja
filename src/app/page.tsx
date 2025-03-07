@@ -16,52 +16,28 @@ import { skills } from "@/data/skills";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center">
-      <section className="container flex min-h-[60vh] flex-col items-center justify-center gap-4 px-4 pb-2 pt-8 md:min-h-[50vh] md:pb-6 md:pt-6 lg:py-6">
-        <div className="flex flex-col items-center gap-4">
-          <h1 className="text-center text-2xl font-bold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl lg:leading-[1.1]">
-            Ethan Smadja
-          </h1>
-          <h2 className="text-center text-base text-muted-foreground sm:text-lg md:text-xl">
-            Data & AI Student interested in Software Engineering.
-          </h2>
-        </div>
-        <p className="max-w-[750px] text-center text-sm sm:text-lg md:text-xl text-muted-foreground">
-          I try to learn new things everyday by building comprehensive and
-          innovative projects that can serve a real purpose.
-        </p>
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <Button asChild className="w-full sm:w-auto">
-            <Link href="/projects">
-              View Projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-          <Button variant="outline" asChild className="w-full sm:w-auto">
-            <Link href="/contact">Contact Me</Link>
-          </Button>
-        </div>
-        <div className="flex gap-4 pt-2">
-          <Button variant="ghost" size="icon" asChild>
-            <Link
-              href="https://github.com/ethansmadjaa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link
-              href="https://www.linkedin.com/in/ethan-smadja-4191b0216/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
-            </Link>
-          </Button>
+    <div className="flex flex-col min-h-screen">
+      <section id="hero" className="flex flex-col items-center justify-center px-4 pt-20 sm:pt-36 md:pt-40 lg:pt-44 pb-8 sm:pb-12 md:pb-20 lg:pb-24 min-h-[85vh]">
+        <div className="container mx-auto flex flex-col items-center text-center">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              Ethan Smadja
+            </h1>
+            <p className="mt-2 sm:mt-4 text-xl sm:text-2xl md:text-3xl text-muted-foreground">
+              Student Software Engineer
+            </p>
+            <p className="mx-auto mt-4 max-w-[700px] text-base sm:text-lg md:text-xl text-muted-foreground">
+              I build innovative solutions with a focus on clean, efficient, and maintainable code.
+            </p>
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="text-base px-8">
+                <Link href="/contact">Get in Touch</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-base px-8">
+                <Link href="/projects">View Projects</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 

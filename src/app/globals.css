@@ -78,5 +78,21 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: 16px;
+  }
+  
+  /* Increase base font size on mobile */
+  @media (max-width: 768px) {
+    html {
+      font-size: 18px;
+    }
+    
+    p, li, a, span, div {
+      font-size: 1.05rem;
+    }
+    
+    .text-sm {
+      font-size: 0.95rem !important;
+    }
   }
 }
