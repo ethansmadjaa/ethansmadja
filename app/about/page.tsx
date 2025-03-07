@@ -119,21 +119,31 @@ export default function AboutPage() {
           <div className="space-y-4">
             <Card>
               <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">Bachelor of Science in Computer Science</CardTitle>
-                <CardDescription className="text-sm sm:text-base">University of Technology, 2015-2019</CardDescription>
+                <CardTitle className="text-lg sm:text-xl">ECE Paris</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Master DATA & IA (2024–2026)</CardDescription>
               </CardHeader>
               <CardContent className="px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <p className="text-sm sm:text-base">Graduated with honors, focusing on software engineering and data structures.</p>
+                <p className="text-sm sm:text-base">Advanced studies in databases, data visualization with Python, machine learning, business intelligence, operating systems, and applied mathematics for data.</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">AWS Certified Developer - Associate</CardTitle>
-                <CardDescription className="text-sm sm:text-base">Amazon Web Services, 2021</CardDescription>
+                <CardTitle className="text-lg sm:text-xl">ECE Paris</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Cycle Préparatoire (2021-2024)</CardDescription>
               </CardHeader>
               <CardContent className="px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <p className="text-sm sm:text-base">Certification validating proficiency in developing, deploying, and debugging cloud-based applications using AWS.</p>
+                <p className="text-sm sm:text-base">Focus on Mathematics (statistics, probability, linear algebra), programming (C, Python, Java), full-stack web development (HTML, JavaScript, CSS), and physics.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">Omnes Education London School</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Exchange Program (Sept–Dec 2023)</CardDescription>
+              </CardHeader>
+              <CardContent className="px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+                <p className="text-sm sm:text-base">Studied finance, management, mathematics, Python, machine learning, and data visualization. Developed a facial recognition system using MATLAB that could identify individuals from a database of 500 images.</p>
               </CardContent>
             </Card>
           </div>
