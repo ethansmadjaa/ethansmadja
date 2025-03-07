@@ -34,5 +34,45 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=450&fit=crop",
     technologies: ["Python", "Jupyter Notebook", "Machine Learning", "Data Analysis", "Pandas", "NumPy", "Scikit-learn"],
     githubUrl: "https://github.com/ethansmadjaa/Machine-learning-course"
+  },
+  {
+    title: "FlashCards",
+    description: "Interactive flashcard learning application",
+    longDescription: "A Python-based flashcard application designed to help users learn and memorize information through an interactive interface and spaced repetition.",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=450&fit=crop",
+    technologies: ["Python", "PyQt6", "SQLite", "Educational Software"],
+    githubUrl: "https://github.com/ethansmadjaa/FlashCards"
+  },
+  {
+    title: "SecretSanta",
+    description: "Automated gift exchange organizer",
+    longDescription: "A Python application that automates the Secret Santa gift exchange process, randomly assigning participants while respecting exclusion rules.",
+    image: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=800&h=450&fit=crop",
+    technologies: ["Python", "Pandas", "Email Automation", "Random Algorithm"],
+    githubUrl: "https://github.com/ethansmadjaa/SecretSanta"
+  },
+  {
+    title: "Vocca Training",
+    description: "Internship application project",
+    longDescription: "Project showcasing AI development skills using various technologies and APIs for natural language processing and automation.",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop",
+    technologies: ["Python", "OpenAI API", "Google API", "Pipecat-ai", "Daily"],
+    githubUrl: "https://github.com/ethansmadjaa/Vocca_training"
+  },
+  {
+    title: "InternshipMonitor",
+    description: "Internship application tracking system",
+    longDescription: "A Python-based system for tracking and managing internship applications, including status updates and communication history.",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=450&fit=crop",
+    technologies: ["Python", "Data Management", "Task Tracking", "SQLite"],
+    githubUrl: "https://github.com/ethansmadjaa/InternshipMonitor"
+  },
+  {
+    title: "DoctoLibECE",
+    description: "Medical appointment booking system",
+    longDescription: "A Java-based medical appointment booking system inspired by Doctolib, developed as part of an ECE course project.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=450&fit=crop",
+    technologies: ["Java", "SQL", "JDBC", "Object-Oriented Programming"],
+    githubUrl: "https://github.com/ethansmadjaa/DoctoLibECE"
   }
 ]; 
