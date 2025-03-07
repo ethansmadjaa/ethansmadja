@@ -22,28 +22,34 @@ export function Navigation() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container w-full max-w-full px-4 flex h-16 items-center justify-between">
-        <Link href="/" className="font-bold text-lg sm:text-xl">
-          ES
-        </Link>
-
-        {/* Desktop navigation */}
-        <div className="hidden md:flex md:gap-x-6 lg:gap-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={cn(
-                "text-sm md:text-base transition-colors hover:text-foreground/80",
-                pathname === item.href ? "text-foreground" : "text-foreground/60"
-              )}
-            >
-              {item.name}
-            </Link>
-          ))}
+      <nav className="container w-full max-w-full px-4 flex h-16 items-center">
+        {/* Left section - Logo */}
+        <div className="w-[120px] flex-shrink-0">
+          <Link href="/" className="font-bold text-lg sm:text-xl">
+            ES
+          </Link>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-4">
+        {/* Center section - Navigation links */}
+        <div className="flex-grow flex justify-center">
+          <div className="hidden md:flex md:gap-x-6 lg:gap-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={cn(
+                  "text-sm md:text-base transition-colors hover:text-foreground/80",
+                  pathname === item.href ? "text-foreground" : "text-foreground/60"
+                )}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Right section - Actions */}
+        <div className="w-[120px] flex-shrink-0 flex items-center justify-end gap-2 sm:gap-4">
           <ModeToggle />
           <Button
             variant="ghost"
