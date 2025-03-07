@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { projects } from "@/data/projects"
 
 export const metadata = {
   title: "Projects - Ethan Smadja",
@@ -17,280 +18,51 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-[750px] space-y-4 text-center">
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">My Projects</h1>
           <p className="text-lg text-muted-foreground sm:text-xl">
-            A showcase of my technical work and software engineering projects
+            A showcase of my technical work and coding projects.
           </p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Project 1 */}
-          <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="E-commerce Platform"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-              <CardTitle className="text-lg sm:text-xl">E-commerce Platform</CardTitle>
-              <CardDescription className="text-sm sm:text-base">
-                A full-featured online shopping platform with secure payment processing
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
-              <p className="mb-4 text-sm text-muted-foreground">
-                Built a modern e-commerce platform with product catalog, shopping cart, user authentication, 
-                and secure payment processing. Implemented responsive design for optimal mobile experience.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">React</Badge>
-                <Badge variant="secondary">Node.js</Badge>
-                <Badge variant="secondary">MongoDB</Badge>
-                <Badge variant="secondary">Stripe</Badge>
-                <Badge variant="secondary">Redux</Badge>
+          {projects.map((project) => (
+            <Card key={project.title} className="flex flex-col overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
               </div>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
-                <Link href="https://github.com/ethansmadja/ecommerce-platform" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </Link>
-              </Button>
-              <Button size="sm" asChild className="flex-1 sm:flex-none">
-                <Link href="https://ecommerce-demo.ethansmadja.com" target="_blank" rel="noopener noreferrer">
-                  <ArrowUpRight className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          {/* Project 2 */}
-          <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Data Visualization Dashboard"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-              <CardTitle className="text-lg sm:text-xl">Data Visualization Dashboard</CardTitle>
-              <CardDescription className="text-sm sm:text-base">
-                Interactive analytics dashboard for business intelligence
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
-              <p className="mb-4 text-sm text-muted-foreground">
-                Developed a real-time analytics dashboard that processes and visualizes large datasets. 
-                Features include customizable charts, filters, and export capabilities.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">React</Badge>
-                <Badge variant="secondary">D3.js</Badge>
-                <Badge variant="secondary">Express</Badge>
-                <Badge variant="secondary">PostgreSQL</Badge>
-                <Badge variant="secondary">WebSockets</Badge>
-              </div>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
-                <Link href="https://github.com/ethansmadja/data-viz-dashboard" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </Link>
-              </Button>
-              <Button size="sm" asChild className="flex-1 sm:flex-none">
-                <Link href="https://dataviz.ethansmadja.com" target="_blank" rel="noopener noreferrer">
-                  <ArrowUpRight className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          {/* Project 3 */}
-          <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Task Management App"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-              <CardTitle className="text-lg sm:text-xl">Task Management App</CardTitle>
-              <CardDescription className="text-sm sm:text-base">
-                Collaborative project management tool with real-time updates
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
-              <p className="mb-4 text-sm text-muted-foreground">
-                Created a task management application with features like drag-and-drop task organization, 
-                team collaboration, deadline tracking, and real-time notifications.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Next.js</Badge>
-                <Badge variant="secondary">TypeScript</Badge>
-                <Badge variant="secondary">Prisma</Badge>
-                <Badge variant="secondary">tRPC</Badge>
-                <Badge variant="secondary">Tailwind CSS</Badge>
-              </div>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
-                <Link href="https://github.com/ethansmadja/task-manager" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </Link>
-              </Button>
-              <Button size="sm" asChild className="flex-1 sm:flex-none">
-                <Link href="https://taskmanager.ethansmadja.com" target="_blank" rel="noopener noreferrer">
-                  <ArrowUpRight className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          {/* Project 4 */}
-          <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Weather App"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-              <CardTitle className="text-lg sm:text-xl">Weather App</CardTitle>
-              <CardDescription className="text-sm sm:text-base">
-                Real-time weather forecasting with location-based services
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
-              <p className="mb-4 text-sm text-muted-foreground">
-                Built a weather application that provides real-time forecasts, historical data, 
-                and location-based services. Features include interactive maps and severe weather alerts.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">React</Badge>
-                <Badge variant="secondary">OpenWeather API</Badge>
-                <Badge variant="secondary">Mapbox</Badge>
-                <Badge variant="secondary">PWA</Badge>
-                <Badge variant="secondary">Geolocation</Badge>
-              </div>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
-                <Link href="https://github.com/ethansmadja/weather-app" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </Link>
-              </Button>
-              <Button size="sm" asChild className="flex-1 sm:flex-none">
-                <Link href="https://weather.ethansmadja.com" target="_blank" rel="noopener noreferrer">
-                  <ArrowUpRight className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          {/* Project 5 */}
-          <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Fitness Tracker"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-              <CardTitle className="text-lg sm:text-xl">Fitness Tracker</CardTitle>
-              <CardDescription className="text-sm sm:text-base">
-                Personal fitness tracking and workout planning application
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
-              <p className="mb-4 text-sm text-muted-foreground">
-                Developed a fitness tracking application that allows users to log workouts, 
-                track progress, set goals, and view performance analytics over time.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">React Native</Badge>
-                <Badge variant="secondary">Firebase</Badge>
-                <Badge variant="secondary">Redux</Badge>
-                <Badge variant="secondary">Chart.js</Badge>
-                <Badge variant="secondary">Health API</Badge>
-              </div>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
-                <Link href="https://github.com/ethansmadja/fitness-tracker" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </Link>
-              </Button>
-              <Button size="sm" asChild className="flex-1 sm:flex-none">
-                <Link href="https://fitness.ethansmadja.com" target="_blank" rel="noopener noreferrer">
-                  <ArrowUpRight className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          {/* Project 6 */}
-          <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Recipe Sharing Platform"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-              <CardTitle className="text-lg sm:text-xl">Recipe Sharing Platform</CardTitle>
-              <CardDescription className="text-sm sm:text-base">
-                Social platform for sharing and discovering recipes
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
-              <p className="mb-4 text-sm text-muted-foreground">
-                Built a recipe sharing platform where users can discover, share, and save recipes. 
-                Features include search functionality, user profiles, and ingredient-based filtering.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Vue.js</Badge>
-                <Badge variant="secondary">Node.js</Badge>
-                <Badge variant="secondary">MongoDB</Badge>
-                <Badge variant="secondary">Express</Badge>
-                <Badge variant="secondary">AWS S3</Badge>
-              </div>
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
-                <Link href="https://github.com/ethansmadja/recipe-platform" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </Link>
-              </Button>
-              <Button size="sm" asChild className="flex-1 sm:flex-none">
-                <Link href="https://recipes.ethansmadja.com" target="_blank" rel="noopener noreferrer">
-                  <ArrowUpRight className="mr-2 h-4 w-4" />
-                  Live Demo
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">{project.title}</CardTitle>
+                <CardDescription className="text-sm sm:text-base">{project.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-grow px-4 pb-0 sm:px-6">
+                <p className="mb-4 text-sm text-muted-foreground">{project.longDescription}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary">{tech}</Badge>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+                <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
+                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    Code
+                  </Link>
+                </Button>
+                {project.liveUrl && (
+                  <Button size="sm" asChild className="flex-1 sm:flex-none">
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <ArrowUpRight className="mr-2 h-4 w-4" />
+                      Live Site
+                    </Link>
+                  </Button>
+                )}
+              </CardFooter>
+            </Card>
+          ))}
         </div>
 
         <div className="flex justify-center pt-8">
