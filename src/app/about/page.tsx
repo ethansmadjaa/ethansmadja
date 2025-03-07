@@ -17,7 +17,7 @@ export default function AboutPage() {
         <div className="space-y-4">
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">About Me</h1>
           <p className="text-lg text-muted-foreground sm:text-xl">
-            Software engineer passionate about building exceptional digital experiences
+            Software engineer passionate about building  digital experiences
           </p>
         </div>
 
@@ -58,56 +58,76 @@ export default function AboutPage() {
           <div className="space-y-4">
             <Card>
               <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">Frontend Development</CardTitle>
-                <CardDescription className="text-sm sm:text-base">Building responsive and accessible user interfaces</CardDescription>
+                <CardTitle className="text-lg sm:text-xl">Programming & Development</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Core programming languages and development tools</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <Badge>React</Badge>
-                <Badge>Next.js</Badge>
-                <Badge>TypeScript</Badge>
+                <Badge>Python</Badge>
+                <Badge>Java</Badge>
+                <Badge>PHP</Badge>
+                <Badge>HTML</Badge>
                 <Badge>JavaScript</Badge>
-                <Badge>HTML5</Badge>
-                <Badge>CSS3</Badge>
-                <Badge>Tailwind CSS</Badge>
-                <Badge>Redux</Badge>
-                <Badge>Responsive Design</Badge>
-                <Badge>Accessibility</Badge>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">Backend Development</CardTitle>
-                <CardDescription className="text-sm sm:text-base">Creating robust server-side applications and APIs</CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <Badge>Node.js</Badge>
-                <Badge>Express</Badge>
-                <Badge>PostgreSQL</Badge>
-                <Badge>MongoDB</Badge>
-                <Badge>REST APIs</Badge>
-                <Badge>GraphQL</Badge>
-                <Badge>Authentication</Badge>
-                <Badge>Authorization</Badge>
-                <Badge>Serverless</Badge>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">DevOps & Tools</CardTitle>
-                <CardDescription className="text-sm sm:text-base">Streamlining development and deployment processes</CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+                <Badge>CSS</Badge>
                 <Badge>Git</Badge>
-                <Badge>GitHub</Badge>
-                <Badge>Docker</Badge>
-                <Badge>AWS</Badge>
-                <Badge>CI/CD</Badge>
-                <Badge>Jest</Badge>
-                <Badge>Testing Library</Badge>
+                <Badge>JetBrains IDEs</Badge>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">Data Science & Machine Learning</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Data analysis and AI technologies</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+                <Badge>Scikit-learn</Badge>
+                <Badge>Pandas</Badge>
+                <Badge>Matplotlib</Badge>
+                <Badge>Machine Learning</Badge>
+                <Badge>Data Analysis</Badge>
+                <Badge>Data Visualization</Badge>
+                <Badge>MATLAB</Badge>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">Mathematics & Statistics</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Mathematical foundations and statistical analysis</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+                <Badge>Statistics</Badge>
+                <Badge>Probability</Badge>
+                <Badge>Linear Algebra</Badge>
+                <Badge>Applied Mathematics</Badge>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">Web Development & Testing</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Full-stack development and quality assurance</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+                <Badge>Next.js</Badge>
+                <Badge>Tailwind CSS</Badge>
                 <Badge>Cypress</Badge>
-                <Badge>Webpack</Badge>
+                <Badge>End-to-End Testing</Badge>
+                <Badge>Full-stack Development</Badge>
+                <Badge>SQL</Badge>
+                <Badge>NoSQL</Badge>
+                <Badge>React</Badge>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">Languages</CardTitle>
+                <CardDescription className="text-sm sm:text-base">Professional language proficiency</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+                <Badge>French (Native)</Badge>
+                <Badge>English (Fluent)</Badge>
+                <Badge>Spanish (B1)</Badge>
               </CardContent>
             </Card>
           </div>
