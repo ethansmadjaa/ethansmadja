@@ -12,16 +12,16 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="container py-12 md:py-16 lg:py-24">
+    <div className="container px-4 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="space-y-8">
         <div className="mx-auto max-w-[750px] space-y-4 text-center">
-          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">My Projects</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">My Projects</h1>
+          <p className="text-lg text-muted-foreground sm:text-xl">
             A showcase of my technical work and software engineering projects
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {/* Project 1 */}
           <Card className="flex flex-col overflow-hidden">
             <div className="relative aspect-video overflow-hidden">
@@ -32,13 +32,13 @@ export default function ProjectsPage() {
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <CardHeader>
-              <CardTitle>E-commerce Platform</CardTitle>
-              <CardDescription>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+              <CardTitle className="text-lg sm:text-xl">E-commerce Platform</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 A full-featured online shopping platform with secure payment processing
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
               <p className="mb-4 text-sm text-muted-foreground">
                 Built a modern e-commerce platform with product catalog, shopping cart, user authentication, 
                 and secure payment processing. Implemented responsive design for optimal mobile experience.
@@ -51,14 +51,14 @@ export default function ProjectsPage() {
                 <Badge variant="secondary">Redux</Badge>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-2">
-              <Button size="sm" variant="outline" asChild>
+            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
                 <Link href="https://github.com/ethansmadja/ecommerce-platform" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Link>
               </Button>
-              <Button size="sm" asChild>
+              <Button size="sm" asChild className="flex-1 sm:flex-none">
                 <Link href="https://ecommerce-demo.ethansmadja.com" target="_blank" rel="noopener noreferrer">
                   <ArrowUpRight className="mr-2 h-4 w-4" />
                   Live Demo
@@ -77,13 +77,13 @@ export default function ProjectsPage() {
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <CardHeader>
-              <CardTitle>Data Visualization Dashboard</CardTitle>
-              <CardDescription>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+              <CardTitle className="text-lg sm:text-xl">Data Visualization Dashboard</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 Interactive analytics dashboard for business intelligence
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
               <p className="mb-4 text-sm text-muted-foreground">
                 Developed a real-time analytics dashboard that processes and visualizes large datasets. 
                 Features include customizable charts, filters, and export capabilities.
@@ -96,14 +96,14 @@ export default function ProjectsPage() {
                 <Badge variant="secondary">WebSockets</Badge>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-2">
-              <Button size="sm" variant="outline" asChild>
+            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
                 <Link href="https://github.com/ethansmadja/data-viz-dashboard" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Link>
               </Button>
-              <Button size="sm" asChild>
+              <Button size="sm" asChild className="flex-1 sm:flex-none">
                 <Link href="https://dataviz.ethansmadja.com" target="_blank" rel="noopener noreferrer">
                   <ArrowUpRight className="mr-2 h-4 w-4" />
                   Live Demo
@@ -122,13 +122,13 @@ export default function ProjectsPage() {
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <CardHeader>
-              <CardTitle>Task Management App</CardTitle>
-              <CardDescription>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+              <CardTitle className="text-lg sm:text-xl">Task Management App</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 Collaborative project management tool with real-time updates
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
               <p className="mb-4 text-sm text-muted-foreground">
                 Created a task management application with features like drag-and-drop task organization, 
                 team collaboration, deadline tracking, and real-time notifications.
@@ -141,14 +141,14 @@ export default function ProjectsPage() {
                 <Badge variant="secondary">Tailwind CSS</Badge>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-2">
-              <Button size="sm" variant="outline" asChild>
+            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
                 <Link href="https://github.com/ethansmadja/task-manager" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Link>
               </Button>
-              <Button size="sm" asChild>
+              <Button size="sm" asChild className="flex-1 sm:flex-none">
                 <Link href="https://taskmanager.ethansmadja.com" target="_blank" rel="noopener noreferrer">
                   <ArrowUpRight className="mr-2 h-4 w-4" />
                   Live Demo
@@ -167,13 +167,13 @@ export default function ProjectsPage() {
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <CardHeader>
-              <CardTitle>Weather App</CardTitle>
-              <CardDescription>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+              <CardTitle className="text-lg sm:text-xl">Weather App</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 Real-time weather forecasting with location-based services
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
               <p className="mb-4 text-sm text-muted-foreground">
                 Built a weather application that provides real-time forecasts, historical data, 
                 and location-based services. Features include interactive maps and severe weather alerts.
@@ -186,14 +186,14 @@ export default function ProjectsPage() {
                 <Badge variant="secondary">Geolocation</Badge>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-2">
-              <Button size="sm" variant="outline" asChild>
+            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
                 <Link href="https://github.com/ethansmadja/weather-app" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Link>
               </Button>
-              <Button size="sm" asChild>
+              <Button size="sm" asChild className="flex-1 sm:flex-none">
                 <Link href="https://weather.ethansmadja.com" target="_blank" rel="noopener noreferrer">
                   <ArrowUpRight className="mr-2 h-4 w-4" />
                   Live Demo
@@ -212,13 +212,13 @@ export default function ProjectsPage() {
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <CardHeader>
-              <CardTitle>Fitness Tracker</CardTitle>
-              <CardDescription>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+              <CardTitle className="text-lg sm:text-xl">Fitness Tracker</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 Personal fitness tracking and workout planning application
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
               <p className="mb-4 text-sm text-muted-foreground">
                 Developed a fitness tracking application that allows users to log workouts, 
                 track progress, set goals, and view performance analytics over time.
@@ -231,14 +231,14 @@ export default function ProjectsPage() {
                 <Badge variant="secondary">Health API</Badge>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-2">
-              <Button size="sm" variant="outline" asChild>
+            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
                 <Link href="https://github.com/ethansmadja/fitness-tracker" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Link>
               </Button>
-              <Button size="sm" asChild>
+              <Button size="sm" asChild className="flex-1 sm:flex-none">
                 <Link href="https://fitness.ethansmadja.com" target="_blank" rel="noopener noreferrer">
                   <ArrowUpRight className="mr-2 h-4 w-4" />
                   Live Demo
@@ -257,13 +257,13 @@ export default function ProjectsPage() {
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <CardHeader>
-              <CardTitle>Recipe Sharing Platform</CardTitle>
-              <CardDescription>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+              <CardTitle className="text-lg sm:text-xl">Recipe Sharing Platform</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 Social platform for sharing and discovering recipes
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow px-4 pb-0 sm:px-6">
               <p className="mb-4 text-sm text-muted-foreground">
                 Built a recipe sharing platform where users can discover, share, and save recipes. 
                 Features include search functionality, user profiles, and ingredient-based filtering.
@@ -276,14 +276,14 @@ export default function ProjectsPage() {
                 <Badge variant="secondary">AWS S3</Badge>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-2">
-              <Button size="sm" variant="outline" asChild>
+            <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+              <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
                 <Link href="https://github.com/ethansmadja/recipe-platform" target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
                   Code
                 </Link>
               </Button>
-              <Button size="sm" asChild>
+              <Button size="sm" asChild className="flex-1 sm:flex-none">
                 <Link href="https://recipes.ethansmadja.com" target="_blank" rel="noopener noreferrer">
                   <ArrowUpRight className="mr-2 h-4 w-4" />
                   Live Demo
@@ -294,7 +294,7 @@ export default function ProjectsPage() {
         </div>
 
         <div className="flex justify-center pt-8">
-          <Button asChild>
+          <Button asChild className="w-full sm:w-auto">
             <Link href="/contact">
               Contact Me
             </Link>

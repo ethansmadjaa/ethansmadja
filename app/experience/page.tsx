@@ -11,22 +11,22 @@ export const metadata = {
 
 export default function ExperiencePage() {
   return (
-    <div className="container max-w-4xl py-12 md:py-16 lg:py-24">
+    <div className="container max-w-4xl px-4 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="space-y-8">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Professional Experience</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Professional Experience</h1>
+          <p className="text-lg text-muted-foreground sm:text-xl">
             My journey as a software engineer across various roles and projects
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {/* Senior Software Engineer */}
           <Card>
-            <CardHeader>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                 <div>
-                  <CardTitle>Senior Software Engineer</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">Senior Software Engineer</CardTitle>
                   <CardDescription className="text-base">TechInnovate Solutions</CardDescription>
                 </div>
                 <div className="flex flex-col items-start gap-2 sm:items-end">
@@ -41,14 +41,14 @@ export default function ExperiencePage() {
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <p>
+            <CardContent className="space-y-4 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+              <p className="text-sm sm:text-base">
                 Lead developer for enterprise-level web applications, focusing on scalability, 
                 performance optimization, and implementing best practices.
               </p>
               <div>
                 <h3 className="font-medium">Key Responsibilities:</h3>
-                <ul className="ml-6 list-disc space-y-1 pt-2">
+                <ul className="ml-6 list-disc space-y-1 pt-2 text-sm sm:text-base">
                   <li>Architected and implemented a microservices-based platform that improved system reliability by 40%</li>
                   <li>Led a team of 5 developers, providing mentorship and code reviews</li>
                   <li>Collaborated with product managers to define technical requirements and roadmaps</li>
@@ -69,10 +69,10 @@ export default function ExperiencePage() {
 
           {/* Software Engineer */}
           <Card>
-            <CardHeader>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                 <div>
-                  <CardTitle>Software Engineer</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">Software Engineer</CardTitle>
                   <CardDescription className="text-base">DataViz Corp</CardDescription>
                 </div>
                 <div className="flex flex-col items-start gap-2 sm:items-end">
@@ -87,13 +87,13 @@ export default function ExperiencePage() {
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <p>
+            <CardContent className="space-y-4 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+              <p className="text-sm sm:text-base">
                 Developed interactive data visualization tools and dashboards for business intelligence applications.
               </p>
               <div>
                 <h3 className="font-medium">Key Achievements:</h3>
-                <ul className="ml-6 list-disc space-y-1 pt-2">
+                <ul className="ml-6 list-disc space-y-1 pt-2 text-sm sm:text-base">
                   <li>Built a real-time analytics dashboard that processed over 1M data points daily</li>
                   <li>Reduced page load time by 65% through code optimization and lazy loading techniques</li>
                   <li>Implemented responsive design principles, improving mobile user experience</li>
@@ -112,10 +112,10 @@ export default function ExperiencePage() {
 
           {/* Junior Developer */}
           <Card>
-            <CardHeader>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                 <div>
-                  <CardTitle>Junior Web Developer</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">Junior Web Developer</CardTitle>
                   <CardDescription className="text-base">E-Commerce Solutions</CardDescription>
                 </div>
                 <div className="flex flex-col items-start gap-2 sm:items-end">
@@ -130,13 +130,13 @@ export default function ExperiencePage() {
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <p>
+            <CardContent className="space-y-4 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+              <p className="text-sm sm:text-base">
                 Contributed to the development of e-commerce platforms and payment processing systems.
               </p>
               <div>
                 <h3 className="font-medium">Key Responsibilities:</h3>
-                <ul className="ml-6 list-disc space-y-1 pt-2">
+                <ul className="ml-6 list-disc space-y-1 pt-2 text-sm sm:text-base">
                   <li>Developed and maintained front-end features for e-commerce websites</li>
                   <li>Implemented payment gateway integrations with Stripe and PayPal</li>
                   <li>Created responsive email templates that improved click-through rates by 25%</li>
@@ -155,7 +155,7 @@ export default function ExperiencePage() {
         </div>
 
         <div className="flex justify-center pt-8">
-          <Button asChild>
+          <Button asChild className="w-full sm:w-auto">
             <Link href="/projects">
               View My Projects
               <ArrowRight className="ml-2 h-4 w-4" />

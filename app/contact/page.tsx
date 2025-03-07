@@ -12,11 +12,11 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="container py-12 md:py-16 lg:py-24">
+    <div className="container px-4 py-8 sm:py-12 md:py-16 lg:py-24">
       <div className="mx-auto max-w-4xl space-y-8">
         <div className="space-y-4 text-center">
-          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">Get In Touch</h1>
-          <p className="mx-auto max-w-[700px] text-lg text-muted-foreground">
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">Get In Touch</h1>
+          <p className="mx-auto max-w-[700px] text-base text-muted-foreground sm:text-lg">
             Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
           </p>
         </div>
@@ -24,13 +24,13 @@ export default function ContactPage() {
         <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
           <div className="space-y-6">
             <Card>
-              <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
-                <CardDescription>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">Contact Information</CardTitle>
+                <CardDescription className="text-sm sm:text-base">
                   Feel free to reach out through any of these channels
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 px-4 pb-4 sm:px-6 sm:pb-5">
                 <div className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 text-muted-foreground" />
                   <div>
@@ -70,13 +70,13 @@ export default function ContactPage() {
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Connect</CardTitle>
-                <CardDescription>
+              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                <CardTitle className="text-lg sm:text-xl">Connect</CardTitle>
+                <CardDescription className="text-sm sm:text-base">
                   Find me on these platforms
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 px-4 pb-4 sm:px-6 sm:pb-5">
                 <div className="flex items-start gap-3">
                   <Github className="mt-0.5 h-5 w-5 text-muted-foreground" />
                   <div>
@@ -111,13 +111,13 @@ export default function ContactPage() {
           </div>
 
           <Card>
-            <CardHeader>
-              <CardTitle>Send Me a Message</CardTitle>
-              <CardDescription>
+            <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+              <CardTitle className="text-lg sm:text-xl">Send Me a Message</CardTitle>
+              <CardDescription className="text-sm sm:text-base">
                 Fill out the form below and I'll get back to you as soon as possible
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="px-4 pb-4 sm:px-6 sm:pb-5">
               <form className="space-y-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">

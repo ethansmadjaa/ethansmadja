@@ -22,13 +22,13 @@ export function Navigation() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-bold text-xl">
+      <nav className="container flex h-14 sm:h-16 items-center justify-between px-4">
+        <Link href="/" className="font-bold text-lg sm:text-xl">
           ES
         </Link>
 
         {/* Desktop navigation */}
-        <div className="hidden md:flex md:gap-x-8">
+        <div className="hidden md:flex md:gap-x-6 lg:gap-x-8">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -43,18 +43,19 @@ export function Navigation() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <ModeToggle />
           <Button
             variant="ghost"
+            size="icon"
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Toggle menu</span>
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5" />
             )}
           </Button>
         </div>
@@ -70,7 +71,7 @@ export function Navigation() {
                 href={item.href}
                 className={cn(
                   "block py-2 text-base",
-                  pathname === item.href ? "text-foreground" : "text-foreground/60"
+                  pathname === item.href ? "text-foreground font-medium" : "text-foreground/60"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
               >
