@@ -8,7 +8,7 @@ import { projects } from "@/data/projects"
 import { Phone } from "lucide-react"
 export const metadata = {
   title: "Projects - Ethan Smadja",
-  description: "Explore Ethan Smadja's portfolio of software engineering projects and technical work.",
+  description: "Explore Ethan Smadja's portfolio of student projects and technical work.",
 }
 
 export default function ProjectsPage() {
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
                 <p className="mb-4 text-sm text-muted-foreground">{project.longDescription}</p>
                 <div className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary">{tech}</Badge>
+                    <Badge key={tech} className="text-white bg-primary">{tech}</Badge>
                   ))}
                 </div>
               </CardContent>

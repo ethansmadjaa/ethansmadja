@@ -9,7 +9,7 @@ export const skills: Skill[] = [
     title: "Programming & Development",
     description: "Core programming languages and development tools",
     items: [
-      "Python (Pandas, Matplotlib, Scikit-learn, Numpy)",
+      "Python",
       "PHP",
       "Java",
       "Git",

@@ -87,7 +87,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary">
+                    <Badge key={tech} className="text-white bg-primary">
                       {tech}
                     </Badge>
                   ))}
@@ -153,9 +153,13 @@ export default function HomePage() {
             {skills.map((skill) => (
               <div key={skill.title} className="rounded-lg border bg-card p-4">
                 <h3 className="font-semibold">{skill.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {skill.items.join(", ")}
-                </p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {skill.items.map((item, index) => (
+                    <Badge key={index} className="text-white bg-primary">
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
