@@ -53,8 +53,16 @@ export default function ProjectsPage() {
                   </Link>
                 </Button>
                 {project.liveUrl && (
-                  <Button size="sm" asChild className="flex-1 sm:flex-none">
-                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    size="sm" 
+                    asChild 
+                    className="flex-1 sm:flex-none bg-primary text-white hover:bg-primary/80"
+                  >
+                    <Link 
+                      href={project.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
                       <ArrowUpRight className="mr-2 h-4 w-4" />
                       Live Site
                     </Link>

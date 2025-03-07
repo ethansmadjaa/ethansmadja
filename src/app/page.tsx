@@ -30,10 +30,10 @@ export default function HomePage() {
               I build innovative solutions with a focus on clean, efficient, and maintainable code.
             </p>
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-base px-8">
+              <Button asChild size="lg" className="text-base px-8 bg-[#00A] hover:bg-[#0077cc] text-white">
                 <Link href="/contact">Get in Touch</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-base px-8">
+              <Button asChild variant="outline" size="lg" className="text-base px-8 text-[#00A] border-[#00A] hover:bg-[#EEEEFF]">
                 <Link href="/projects">View Projects</Link>
               </Button>
             </div>
@@ -97,7 +97,11 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 {project.liveUrl && (
-                  <Button size="sm" asChild className="flex-1 sm:flex-none">
+                  <Button 
+                    size="sm" 
+                    asChild 
+                    className="flex-1 sm:flex-none bg-primary text-white hover:bg-primary/80"
+                  >
                     <Link
                       href={project.liveUrl}
                       target="_blank"
