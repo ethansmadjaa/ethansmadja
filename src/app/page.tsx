@@ -146,29 +146,47 @@ export default function HomePage() {
         <div className="container space-y-8 px-4 py-8 sm:py-12 md:py-16 lg:py-20">
           <div className="mx-auto flex max-w-[750px] flex-col items-center gap-4">
             <h2 className="text-center text-xl font-bold leading-tight tracking-tighter sm:text-2xl md:text-3xl">
-              Skills & Technologies
+              Skills & Expertise
             </h2>
             <p className="text-center text-sm sm:text-base text-muted-foreground">
-              A selection of the technologies and tools I work with.
+              A comprehensive overview of my technical and professional capabilities
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Frontend Development</h3>
+              <h3 className="font-semibold">Programming & Development</h3>
               <p className="text-sm text-muted-foreground">
-                React, Next.js, TypeScript, Tailwind CSS
+                Python (Pandas, Matplotlib, Scikit-learn, Numpy), PHP, Java, Git
               </p>
             </div>
             <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Backend Development</h3>
+              <h3 className="font-semibold">Data Science & AI</h3>
               <p className="text-sm text-muted-foreground">
-                Node.js, Express, PostgreSQL, REST APIs
+                Machine Learning, Data Analysis, Data Visualization, Business Intelligence
               </p>
             </div>
             <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">DevOps & Tools</h3>
+              <h3 className="font-semibold">Web Technologies</h3>
               <p className="text-sm text-muted-foreground">
-                Git, Docker, AWS, CI/CD
+                HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Typescript, Cypress Testing
+              </p>
+            </div>
+            <div className="rounded-lg border bg-card p-4">
+              <h3 className="font-semibold">Mathematics</h3>
+              <p className="text-sm text-muted-foreground">
+                Statistics, Probability, Linear Algebra, Applied Mathematics for Data
+              </p>
+            </div>
+            <div className="rounded-lg border bg-card p-4">
+              <h3 className="font-semibold">Languages</h3>
+              <p className="text-sm text-muted-foreground">
+                French (Native), English (TOEFL 93, TOEIC 930), Spanish (B1)
+              </p>
+            </div>
+            <div className="rounded-lg border bg-card p-4">
+              <h3 className="font-semibold">Leadership & Soft Skills</h3>
+              <p className="text-sm text-muted-foreground">
+                Team Management, Event Planning, Teaching, Community Service (BAFA Certified)
               </p>
             </div>
           </div>
