@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: 'Ethan Smadja',
   description: 'Professional portfolio and personal website of Ethan Smadja, showcasing student projects, skills, and experience.',
   keywords: 'Ethan Smadja, Software Engineer, Web Development, Portfolio, Full Stack Developer, Student Projects, Skills, Experience',
+  metadataBase: new URL('https://ethansmadja.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
