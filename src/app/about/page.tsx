@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { skills } from "@/data/skills";
 
 export const metadata = {
   title: "About - Ethan Smadja",
@@ -75,98 +76,23 @@ export default function AboutPage() {
           </h2>
 
           <div className="space-y-4">
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">
-                  Programming & Development
-                </CardTitle>
-                <CardDescription className="text-sm sm:text-base">
-                  Core programming languages and development tools
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <Badge>Python</Badge>
-                <Badge>Java</Badge>
-                <Badge>PHP</Badge>
-                <Badge>HTML</Badge>
-                <Badge>JavaScript</Badge>
-                <Badge>CSS</Badge>
-                <Badge>Git</Badge>
-                <Badge>JetBrains IDEs</Badge>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">
-                  Data Science & Machine Learning
-                </CardTitle>
-                <CardDescription className="text-sm sm:text-base">
-                  Data analysis and AI technologies
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <Badge>Python</Badge>
-                <Badge>Scikit-learn</Badge>
-                <Badge>Pandas</Badge>
-                <Badge>Matplotlib</Badge>
-                <Badge>Machine Learning</Badge>
-                <Badge>Data Analysis</Badge>
-                <Badge>Data Visualization</Badge>
-                <Badge>MATLAB</Badge>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">
-                  Mathematics & Statistics
-                </CardTitle>
-                <CardDescription className="text-sm sm:text-base">
-                  Mathematical foundations and statistical analysis
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <Badge>Statistics</Badge>
-                <Badge>Probability</Badge>
-                <Badge>Linear Algebra</Badge>
-                <Badge>Applied Mathematics</Badge>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">
-                  Web Development & Testing
-                </CardTitle>
-                <CardDescription className="text-sm sm:text-base">
-                  Full-stack development and quality assurance
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <Badge>Next.js</Badge>
-                <Badge>Tailwind CSS</Badge>
-                <Badge>Cypress</Badge>
-                <Badge>End-to-End Testing</Badge>
-                <Badge>SQL</Badge>
-                <Badge>NoSQL</Badge>
-                <Badge>React</Badge>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                <CardTitle className="text-lg sm:text-xl">Languages</CardTitle>
-                <CardDescription className="text-sm sm:text-base">
-                  Professional language proficiency
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
-                <Badge>French (Native)</Badge>
-                <Badge>English (Fluent)</Badge>
-                <Badge>Spanish (B1)</Badge>
-              </CardContent>
-            </Card>
+            {skills.map((skill) => (
+              <Card key={skill.title}>
+                <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                  <CardTitle className="text-lg sm:text-xl">
+                    {skill.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm sm:text-base">
+                    {skill.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
+                  {skill.items.map((item) => (
+                    <Badge key={item}>{item}</Badge>
+                  ))}
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
 

@@ -12,6 +12,7 @@ import { ArrowRight, Github, Linkedin, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import { skills } from "@/data/skills";
 
 export default function HomePage() {
   return (
@@ -153,42 +154,14 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Programming & Development</h3>
-              <p className="text-sm text-muted-foreground">
-                Python (Pandas, Matplotlib, Scikit-learn, Numpy), PHP, Java, Git
-              </p>
-            </div>
-            <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Data Science & AI</h3>
-              <p className="text-sm text-muted-foreground">
-                Machine Learning, Data Analysis, Data Visualization, Business Intelligence
-              </p>
-            </div>
-            <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Web Technologies</h3>
-              <p className="text-sm text-muted-foreground">
-                HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Typescript, Cypress Testing
-              </p>
-            </div>
-            <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Mathematics</h3>
-              <p className="text-sm text-muted-foreground">
-                Statistics, Probability, Linear Algebra, Applied Mathematics for Data
-              </p>
-            </div>
-            <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Languages</h3>
-              <p className="text-sm text-muted-foreground">
-                French (Native), English (TOEFL 93, TOEIC 930), Spanish (B1)
-              </p>
-            </div>
-            <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-semibold">Leadership & Soft Skills</h3>
-              <p className="text-sm text-muted-foreground">
-                Team Management, Event Planning, Teaching, Community Service (BAFA Certified)
-              </p>
-            </div>
+            {skills.map((skill) => (
+              <div key={skill.title} className="rounded-lg border bg-card p-4">
+                <h3 className="font-semibold">{skill.title}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {skill.items.join(", ")}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
