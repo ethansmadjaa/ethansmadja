@@ -4,7 +4,7 @@ import { CalendarIcon, MapPinIcon } from "lucide-react";
 
 export const metadata = {
   title: "Experience - Ethan Smadja",
-  description: "My journey as a software engineer across various roles and projects",
+  description: "My journey as a student trying to learn new skills and apply them to real projects",
 };
 
 export default function ExperiencePage() {
@@ -15,7 +15,7 @@ export default function ExperiencePage() {
           Professional Experience
         </h1>
         <p className="text-lg text-muted-foreground">
-          My journey as a software engineer across various roles and projects
+          My journey as a student trying to learn new skills and apply them to real projects
         </p>
       </div>
 
