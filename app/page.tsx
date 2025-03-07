@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Github, Linkedin } from "lucide-react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { ArrowRight, Github, Linkedin, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -74,7 +75,101 @@ export default function Home() {
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/* Project cards will go here */}
+          {/* Project 1 */}
+          <Card className="flex flex-col overflow-hidden">
+            <div className="relative aspect-video overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
+                alt="E-commerce Platform"
+                fill
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <CardHeader>
+              <CardTitle>E-commerce Platform</CardTitle>
+              <CardDescription>
+                A full-featured online shopping platform
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <p className="text-sm text-muted-foreground">
+                Built a modern e-commerce platform with product catalog, shopping cart, 
+                and secure payment processing.
+              </p>
+            </CardContent>
+            <CardFooter className="flex gap-2">
+              <Button size="sm" asChild>
+                <Link href="/projects">
+                  <ArrowRight className="mr-2 h-4 w-4" />
+                  View Details
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Project 2 */}
+          <Card className="flex flex-col overflow-hidden">
+            <div className="relative aspect-video overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
+                alt="Data Visualization Dashboard"
+                fill
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <CardHeader>
+              <CardTitle>Data Visualization</CardTitle>
+              <CardDescription>
+                Interactive analytics dashboard
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <p className="text-sm text-muted-foreground">
+                Developed a real-time analytics dashboard that processes and visualizes 
+                large datasets with customizable charts.
+              </p>
+            </CardContent>
+            <CardFooter className="flex gap-2">
+              <Button size="sm" asChild>
+                <Link href="/projects">
+                  <ArrowRight className="mr-2 h-4 w-4" />
+                  View Details
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          {/* Project 3 */}
+          <Card className="flex flex-col overflow-hidden">
+            <div className="relative aspect-video overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
+                alt="Task Management App"
+                fill
+                className="object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <CardHeader>
+              <CardTitle>Task Management App</CardTitle>
+              <CardDescription>
+                Collaborative project management tool
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <p className="text-sm text-muted-foreground">
+                Created a task management application with drag-and-drop organization, 
+                team collaboration, and real-time updates.
+              </p>
+            </CardContent>
+            <CardFooter className="flex gap-2">
+              <Button size="sm" asChild>
+                <Link href="/projects">
+                  <ArrowRight className="mr-2 h-4 w-4" />
+                  View Details
+                </Link>
+              </Button>
+            </CardFooter>
+          </Card>
         </div>
         <div className="flex justify-center">
           <Button variant="outline" asChild>
