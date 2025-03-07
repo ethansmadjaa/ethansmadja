@@ -50,7 +50,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
-                    href="https://github.com/ethansmadja"
+                    href="https://github.com/ethansmadjaa"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
@@ -61,7 +61,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://linkedin.com/in/ethansmadja"
+                    href="https://www.linkedin.com/in/ethan-smadja-4191b0216/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
@@ -72,7 +72,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="mailto:hello@ethansmadja.com"
+                    href="mailto:Ethan@smadja.biz"
                     className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
                   >
                     <Mail className="h-4 w-4" />

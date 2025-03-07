@@ -43,7 +43,7 @@ export default function Home() {
         <div className="flex gap-4 pt-2">
           <Button variant="ghost" size="icon" asChild>
             <Link
-              href="https://github.com/ethansmadja"
+              href="https://github.com/ethansmadjaa"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -53,7 +53,7 @@ export default function Home() {
           </Button>
           <Button variant="ghost" size="icon" asChild>
             <Link
-              href="https://linkedin.com/in/ethansmadja"
+              href="https://www.linkedin.com/in/ethan-smadja-4191b0216/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -77,14 +77,6 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {/* Project 1 */}
           <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="E-commerce Platform"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
             <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
               <CardTitle className="text-lg">E-commerce Platform</CardTitle>
               <CardDescription className="text-sm">
@@ -109,14 +101,6 @@ export default function Home() {
 
           {/* Project 2 */}
           <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Data Visualization Dashboard"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
             <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
               <CardTitle className="text-lg">Data Visualization</CardTitle>
               <CardDescription className="text-sm">
@@ -141,14 +125,6 @@ export default function Home() {
 
           {/* Project 3 */}
           <Card className="flex flex-col overflow-hidden">
-            <div className="relative aspect-video overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                alt="Task Management App"
-                fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
             <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
               <CardTitle className="text-lg">Task Management App</CardTitle>
               <CardDescription className="text-sm">

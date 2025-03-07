@@ -36,10 +36,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Email</h3>
                     <a 
-                      href="mailto:hello@ethansmadja.com" 
+                      href="mailto:Ethan@smadja.biz" 
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
-                      hello@ethansmadja.com
+                      Ethan@smadja.biz
                     </a>
                   </div>
                 </div>
@@ -49,10 +49,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Phone</h3>
                     <a 
-                      href="tel:+14155551234" 
+                      href="tel:+33621801615" 
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
-                      (415) 555-1234
+                      +33 6 21 80 16 15
                     </a>
                   </div>
                 </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">Location</h3>
                     <p className="text-sm text-muted-foreground">
-                      San Francisco, CA
+                      34 boulevard Georges Clemenceau, 92400 Courbevoie, France
                     </p>
                   </div>
                 </div>
@@ -82,12 +82,12 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">GitHub</h3>
                     <a 
-                      href="https://github.com/ethansmadja" 
+                      href="https://github.com/ethansmadjaa" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
-                      github.com/ethansmadja
+                      github.com/ethansmadjaa
                     </a>
                   </div>
                 </div>
@@ -97,12 +97,12 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium">LinkedIn</h3>
                     <a 
-                      href="https://linkedin.com/in/ethansmadja" 
+                      href="https://www.linkedin.com/in/ethan-smadja-4191b0216/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-sm text-muted-foreground hover:text-foreground"
                     >
-                      linkedin.com/in/ethansmadja
+                      linkedin.com/in/ethan-smadja
                     </a>
                   </div>
                 </div>

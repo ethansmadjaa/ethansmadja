@@ -24,26 +24,25 @@ export default function AboutPage() {
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div className="order-2 space-y-4 md:order-1">
             <p className="text-sm sm:text-base">
-              Hello! I'm Ethan, a full-stack software engineer with a passion for creating elegant, 
-              efficient solutions to complex problems. With a strong foundation in both frontend and 
-              backend technologies, I specialize in building responsive web applications that deliver 
-              exceptional user experiences.
+              Hello! I'm Ethan, a passionate student pursuing a Master's in Data & AI at ECE Paris. I combine my technical skills 
+              in full-stack development with a strong foundation in mathematics and machine learning. Currently based in Courbevoie, 
+              France, I'm dedicated to creating innovative solutions at the intersection of web development and data science.
             </p>
             <p className="text-sm sm:text-base">
-              My journey in software development began with a curiosity about how digital products work 
-              behind the scenes. This curiosity evolved into a career where I've had the opportunity to 
-              work on diverse projects across various industries, from e-commerce platforms to data 
-              visualization tools.
+              My journey in technology began with my studies at ECE Paris, where I developed a strong foundation in mathematics 
+              (statistics, probability, linear algebra), programming (C, Python, Java), and web development. During my exchange at 
+              Omnes Education London School, I expanded my expertise in finance, management, and machine learning, including a notable 
+              project developing a facial recognition system using MATLAB that could identify individuals from a database of 500 images.
             </p>
             <p className="text-sm sm:text-base">
-              I believe in writing clean, maintainable code and staying current with emerging technologies 
-              and best practices. When I'm not coding, you can find me exploring new hiking trails, 
-              experimenting with photography, or diving into a good book.
+              Beyond my technical pursuits, I'm actively involved in community service as a Director at Moadon, where I organize 
+              activities for youth (ages 8-17) and manage teams of animators. I'm also passionate about music (piano), sports (padel), 
+              and exploring new cultures through travel.
             </p>
           </div>
           <div className="order-1 flex justify-center md:order-2">
             <Image
-              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop"
+              src="/profile.jpg"
               alt="Ethan Smadja"
               width={240}
               height={240}

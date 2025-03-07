@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Github, Linkedin } from "lucide-react"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -57,6 +57,26 @@ export function Navigation() {
             ) : (
               <Menu className="h-5 w-5" />
             )}
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link
+              href="https://github.com/ethansmadjaa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link
+              href="https://www.linkedin.com/in/ethan-smadja-4191b0216/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="h-5 w-5" />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
           </Button>
         </div>
       </nav>
