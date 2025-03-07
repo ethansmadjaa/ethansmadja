@@ -117,7 +117,7 @@ export default function ContactPage() {
                   />
                 </div>
                 
-                <Button type="submit" className="w-full sm:w-auto">
+                <Button type="submit" className="w-full sm:w-auto text-white bg-primary">
                   Send Message
                 </Button>
               </form>

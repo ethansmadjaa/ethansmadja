@@ -17,7 +17,10 @@ import { skills } from "@/data/skills";
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <section id="hero" className="flex flex-col items-center justify-center px-4 pt-20 sm:pt-36 md:pt-40 lg:pt-44 pb-8 sm:pb-12 md:pb-20 lg:pb-24 min-h-[85vh]">
+      <section
+        id="hero"
+        className="flex flex-col items-center justify-center px-4 pt-20 sm:pt-36 md:pt-40 lg:pt-44 pb-8 sm:pb-12 md:pb-20 lg:pb-24 min-h-[85vh]"
+      >
         <div className="container mx-auto flex flex-col items-center text-center">
           <div className="mx-auto max-w-3xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -27,13 +30,23 @@ export default function HomePage() {
               Student Software Engineer
             </p>
             <p className="mx-auto mt-4 max-w-[700px] text-base sm:text-lg md:text-xl text-muted-foreground">
-              I build innovative solutions with a focus on clean, efficient, and maintainable code.
+              I build innovative solutions with a focus on clean, efficient, and
+              maintainable code.
             </p>
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-base px-8 bg-[#00A] hover:bg-[#0077cc] text-white">
+              <Button
+                asChild
+                size="lg"
+                className="text-base px-8 bg-[#00A] hover:bg-[#0077cc] text-white"
+              >
                 <Link href="/contact">Get in Touch</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-base px-8 text-[#00A] border-[#00A] hover:bg-[#EEEEFF]">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="text-base px-8 text-[#00A] border-[#00A] hover:bg-[#EEEEFF]"
+              >
                 <Link href="/projects">View Projects</Link>
               </Button>
             </div>
@@ -97,9 +110,9 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 {project.liveUrl && (
-                  <Button 
-                    size="sm" 
-                    asChild 
+                  <Button
+                    size="sm"
+                    asChild
                     className="flex-1 sm:flex-none bg-primary text-white hover:bg-primary/80"
                   >
                     <Link
@@ -116,9 +129,11 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
-        <div className="flex justify-center">
-          <Button variant="outline" asChild className="w-full sm:w-auto">
-            <Link href="/projects">View All Projects</Link>
+        <div className="flex justify-center pt-8">
+          <Button asChild className="w-full sm:w-auto">
+            <Link href="/projects" className="text-white">
+              View All my Projects
+            </Link>
           </Button>
         </div>
       </section>
@@ -130,7 +145,8 @@ export default function HomePage() {
               Skills & Expertise
             </h2>
             <p className="text-center text-sm sm:text-base text-muted-foreground">
-              A comprehensive overview of my technical and professional capabilities
+              A comprehensive overview of my technical and professional
+              capabilities
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

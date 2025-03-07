@@ -71,6 +71,12 @@
   color: white;
 }
 
+/* Force container to be full width */
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 .text-primary {
   color: #00A;
 }

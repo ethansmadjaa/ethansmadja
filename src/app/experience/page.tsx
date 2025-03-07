@@ -1,6 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { experiences } from "@/data/experiences";
 import { CalendarIcon, MapPinIcon } from "lucide-react";
+import { Link as LucideLink } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Experience - Ethan Smadja",
@@ -52,13 +56,21 @@ export default function ExperiencePage() {
 
             <div className="mt-4 flex flex-wrap gap-2">
               {experience.technologies.map((tech) => (
-                <Badge key={tech} variant="secondary">
+                <Badge key={tech} className="text-white bg-primary">
                   {tech}
                 </Badge>
               ))}
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center pt-8">
+          <Button asChild className="w-full sm:w-auto">
+            <Link href="/contact" className="text-white">
+              Contact Me
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
       </div>
     </div>
   );

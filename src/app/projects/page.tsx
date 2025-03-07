@@ -5,7 +5,7 @@ import { ArrowUpRight, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { projects } from "@/data/projects"
-
+import { Phone } from "lucide-react"
 export const metadata = {
   title: "Projects - Ethan Smadja",
   description: "Explore Ethan Smadja's portfolio of software engineering projects and technical work.",
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
               </CardHeader>
               <CardContent className="flex-grow px-4 pb-0 sm:px-6">
                 <p className="mb-4 text-sm text-muted-foreground">{project.longDescription}</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 px-4 pb-4 pt-0 sm:px-6 sm:pb-5">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} variant="secondary">{tech}</Badge>
                   ))}
@@ -75,8 +75,9 @@ export default function ProjectsPage() {
 
         <div className="flex justify-center pt-8">
           <Button asChild className="w-full sm:w-auto">
-            <Link href="/contact">
+            <Link href="/contact" className="text-white">
               Contact Me
+              <Phone className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>

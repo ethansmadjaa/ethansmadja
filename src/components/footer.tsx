@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
     <footer className="border-t bg-muted/40">
-      <div className="container px-4 py-8 md:py-12">
+      <div className="container w-full max-w-full px-4 py-8 md:py-12">
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Ethan Smadja</h3>
@@ -68,15 +68,6 @@ export function Footer() {
                   >
                     <Linkedin className="h-4 w-4" />
                     <span>LinkedIn</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:Ethan@smadja.biz"
-                    className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    <Mail className="h-4 w-4" />
-                    <span>Email</span>
                   </a>
                 </li>
               </ul>
