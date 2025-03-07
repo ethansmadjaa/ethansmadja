@@ -10,15 +10,15 @@ import Head from 'next/head';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ethan Smadja - Software Engineer',
-  description: 'Professional portfolio and personal website of Ethan Smadja, showcasing software engineering projects, skills, and experience.',
-  keywords: 'Ethan Smadja, Software Engineer, Web Development, Portfolio, Full Stack Developer',
+  title: 'Ethan Smadja',
+  description: 'Professional portfolio and personal website of Ethan Smadja, showcasing student projects, skills, and experience.',
+  keywords: 'Ethan Smadja, Software Engineer, Web Development, Portfolio, Full Stack Developer, Student Projects, Skills, Experience',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://ethansmadja.com',
     siteName: 'Ethan Smadja',
-    title: 'Ethan Smadja - Software Engineer',
+    title: 'Ethan Smadja',
     description: 'Professional portfolio and personal website of Ethan Smadja',
     images: [
       {
