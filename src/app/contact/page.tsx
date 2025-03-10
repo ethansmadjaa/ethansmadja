@@ -6,12 +6,14 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, MapPin } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { useToast } from "@/hooks/use-toast"
+import ReCAPTCHA from "react-google-recaptcha"
 
 export default function ContactPage() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,6 +32,18 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Get the CAPTCHA token
+    const captchaToken = recaptchaRef.current?.getValue();
+    
+    if (!captchaToken) {
+      toast({
+        title: "Error",
+        description: "Please complete the CAPTCHA verification",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
@@ -38,7 +52,10 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          captchaToken,
+        }),
       });
       
       const data = await response.json();
@@ -49,13 +66,14 @@ export default function ContactPage() {
           description: "Thank you for your message. I'll get back to you soon.",
         });
         
-        // Reset the form
+        // Reset the form and CAPTCHA
         setFormData({
           name: '',
           email: '',
           subject: '',
           message: ''
         });
+        recaptchaRef.current?.reset();
       } else {
         toast({
           title: "Error",
@@ -198,6 +216,14 @@ export default function ContactPage() {
                     required 
                     value={formData.message}
                     onChange={handleChange}
+                  />
+                </div>
+
+                <div className="flex justify-center">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                    theme="light"
                   />
                 </div>
                 

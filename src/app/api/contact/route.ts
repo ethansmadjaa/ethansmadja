@@ -13,15 +13,43 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Your email address where you want to receive contact notifications
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'ethan@smadja.biz';
 
+// Function to verify reCAPTCHA token
+async function verifyCaptcha(token: string) {
+  try {
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+    });
+
+    const data = await response.json();
+    return data.success;
+  } catch (error) {
+    console.error('Error verifying CAPTCHA:', error);
+    return false;
+  }
+}
+
 export async function POST(request: Request) {
   try {
     // Parse the request body
-    const { name, email, subject, message } = await request.json();
+    const { name, email, subject, message, captchaToken } = await request.json();
 
     // Validate input
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !subject || !message || !captchaToken) {
       return NextResponse.json(
         { success: false, message: 'Missing required fields' },
+        { status: 400 }
+      );
+    }
+
+    // Verify CAPTCHA
+    const isValidCaptcha = await verifyCaptcha(captchaToken);
+    if (!isValidCaptcha) {
+      return NextResponse.json(
+        { success: false, message: 'Invalid CAPTCHA verification' },
         { status: 400 }
       );
     }
