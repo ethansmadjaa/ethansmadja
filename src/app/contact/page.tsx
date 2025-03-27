@@ -5,8 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, MapPin } from "lucide-react"
-import Link from "next/link"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useToast } from "@/hooks/use-toast"
 import ReCAPTCHA from "react-google-recaptcha"
 
@@ -20,6 +19,11 @@ export default function ContactPage() {
     subject: '',
     message: ''
   });
+
+  // Add debug logging
+  useEffect(() => {
+    console.log('reCAPTCHA Site Key:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -90,6 +94,16 @@ export default function ContactPage() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // Add error handling for reCAPTCHA
+  const handleRecaptchaError = () => {
+    console.error('reCAPTCHA error occurred');
+    toast({
+      title: "Error",
+      description: "There was an error loading the CAPTCHA. Please refresh the page.",
+      variant: "destructive",
+    });
   };
 
   return (
@@ -224,6 +238,7 @@ export default function ContactPage() {
                     ref={recaptchaRef}
                     sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
                     theme="light"
+                    onErrored={handleRecaptchaError}
                   />
                 </div>
                 

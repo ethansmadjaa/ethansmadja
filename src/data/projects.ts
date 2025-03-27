@@ -28,6 +28,15 @@ export const projects: Project[] = [
     liveUrl: "https://bigdataspark.streamlit.app/"
   },
   {
+    title: "Demo.vocca.ai",
+    description: "Implemented a platform to showcase the capabilities of the Vocca AI agents",
+    longDescription: "a next.js and react project leveraging Vapi agents to showcase the capabilities of the Vocca AI agents",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=450&fit=crop",
+    technologies: ["Next.js", "React", "Vapi", "Tailwind CSS"],
+    githubUrl: "https://github.com/ethansmadjaa/vocca-demo-local.git",
+    liveUrl: "https://vocca-demo.vercel.app/"
+  },
+  {
     title: "Machine Learning Course",
     description: "Comprehensive machine learning course materials and projects",
     longDescription: "A collection of Jupyter notebooks and projects covering various machine learning concepts, algorithms, and practical implementations.",
