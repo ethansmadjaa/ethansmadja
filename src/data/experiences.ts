@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
       "Learning and applying new technologies in AI development",
       "Contributing to the growth of an emerging AI company"
     ],
-    technologies: ["AI Development", "Machine Learning", "Python", "Pipecat-ai", "Daily", "React", "Next.js", "Typescript", "Tailwind CSS"]
+    technologies: ["AI Development", "Python", "Pipecat-ai", "Daily", "React", "Next.js", "Typescript", "Tailwind CSS"]
   },
   {
     title: "Full-stack Web Developer Intern",
