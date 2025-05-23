@@ -46,12 +46,14 @@ export default function ProjectsPage() {
                 </div>
               </CardContent>
               <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-                <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
-                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </Link>
-                </Button>
+                {project.githubUrl && (
+                  <Button size="sm" variant="outline" asChild className="flex-1 sm:flex-none">
+                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      Code
+                    </Link>
+                  </Button>
+                )}
                 {project.liveUrl && (
                   <Button 
                     size="sm" 
