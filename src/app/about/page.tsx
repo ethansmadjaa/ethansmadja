@@ -35,10 +35,7 @@ export default function AboutPage() {
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div className="order-2 space-y-4 md:order-1">
             <p className="text-base sm:text-lg">
-              Hello! I'm Ethan, a passionate student pursuing a Master's in Data
-              & AI at ECE Paris. Currently based in Paris, I'm dedicated to
-              creating innovative solutions using nowadays technologies and
-              different programming languages.
+              Hello! I'm Ethan, a passionate student pursuing a Master's in <strong>Data & AI</strong> at ECE Paris. Currently based in Paris, I'm dedicated to creating <strong>innovative solutions</strong> using nowadays technologies and different programming languages.
             </p>
             <p className="text-base sm:text-lg">
               My journey in technology began with my studies at ECE Paris, where
@@ -60,7 +57,7 @@ export default function AboutPage() {
           </div>
           <div className="order-1 flex justify-center md:order-2">
             <Image
-              src="/profile.JPG"
+              src="/profile.jpg"
               alt="Ethan Smadja"
               width={240}
               height={240}
