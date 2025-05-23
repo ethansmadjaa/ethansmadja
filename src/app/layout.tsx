@@ -67,7 +67,9 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <Navigation />
             <div className="h-16" />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1">
+              {children}
+            </main>
             <Footer />
           </div>
           <Toaster />
