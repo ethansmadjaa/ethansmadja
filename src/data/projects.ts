@@ -4,7 +4,7 @@ export interface Project {
   longDescription: string;
   image: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
 }
 
@@ -19,22 +19,20 @@ export const projects: Project[] = [
     liveUrl: "https://ethansmadja.com"
   },
   {
-    title: "BigDataSpark",
-    description: "Financial data analysis and insights platform",
-    longDescription: "A Python application that analyzes financial data using Apache Spark, providing insights and visualizations for better decision-making.",
-    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=450&fit=crop",
-    technologies: ["Python", "Apache Spark", "Data Analysis", "Financial Data", "Streamlit"],
-    githubUrl: "https://github.com/ethansmadjaa/BigDataSpark",
-    liveUrl: "https://bigdataspark.streamlit.app/"
+    title: "Testing Vocca",
+    description: "Platform to test the capabilities of the Vocca AI agents",
+    longDescription: "A platform to test the capabilities of the Vocca AI agents, leveraging Ai frameworks like Pipecat-ai, and web frameworks like Next.js and React",
+    image: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    technologies: ["Python", "Pipecat-ai", "Daily", "React", "Next.js", "Typescript", "Tailwind CSS"],
+    liveUrl: "https://testing.vocca.ai/?lang=fr"
   },
   {
-    title: "Demo.vocca.ai",
-    description: "Implemented a platform to showcase the capabilities of the Vocca AI agents",
-    longDescription: "a next.js and react project leveraging Vapi agents to showcase the capabilities of the Vocca AI agents",
-    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&h=450&fit=crop",
-    technologies: ["Next.js", "React", "Vapi", "Tailwind CSS"],
-    githubUrl: "https://github.com/ethansmadjaa/vocca-demo-local.git",
-    liveUrl: "https://vocca-demo.vercel.app/"
+    title: "Demo vocca.ai",
+    description: "Platform to showcase Demos using Vocca AI agents",
+    longDescription: "A card based platform to showcase Demos using Vocca AI agents",
+    image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&auto=format&fit=crop&q=60",
+    technologies: ["Next.js", "React", "Vapi", "Tailwind CSS", "Pipecat-ai", "vercel"],
+    liveUrl: "https://demo.vocca.ai/"
   },
   {
     title: "Machine Learning Course",
@@ -53,12 +51,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/ethansmadjaa/FlashCards"
   },
   {
-    title: "SecretSanta",
-    description: "Automated gift exchange organizer",
-    longDescription: "A Python application that automates the Secret Santa gift exchange process, randomly assigning participants while respecting exclusion rules.",
-    image: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=800&h=450&fit=crop",
-    technologies: ["Python", "Pandas", "Email Automation", "Random Algorithm"],
-    githubUrl: "https://github.com/ethansmadjaa/SecretSanta"
+    title: "Pricing Vocca",
+    description: "An automated ROI calculator for Vocca",
+    longDescription: "An automated ROI calculator for Vocca, using Next.js and Tailwind CSS",
+    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=60",
+    technologies: ["Python", "Pipecat-ai", "Daily", "React", "Next.js", "Typescript", "Tailwind CSS", "vercel"],
+    liveUrl: "https://pricing.vocca.ai/"
   },
   {
     title: "Vocca Training",
@@ -75,13 +73,5 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=450&fit=crop",
     technologies: ["Python", "Data Management", "Task Tracking", "SQLite"],
     githubUrl: "https://github.com/ethansmadjaa/InternshipMonitor"
-  },
-  {
-    title: "DoctoLibECE",
-    description: "Medical appointment booking system",
-    longDescription: "A Java-based medical appointment booking system inspired by Doctolib, developed as part of an ECE course project.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=450&fit=crop",
-    technologies: ["Java", "SQL", "JDBC", "OOP"],
-    githubUrl: "https://github.com/ethansmadjaa/DoctoLibECE"
   }
 ]; 
