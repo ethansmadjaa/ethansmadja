@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/card";  
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Github, Linkedin, ArrowUpRight } from "lucide-react";
+import { Github, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
@@ -23,9 +23,7 @@ import {
   AnimatedButton,
   AnimatedCard,
   AnimatedText,
-  fadeInUp,
-  slideInLeft,
-  slideInRight
+  fadeInUp
 } from "@/components/animations";
 import { PageWrapper } from "@/components/page-wrapper";
 
@@ -48,7 +46,7 @@ export function HomeContent() {
                 delay={0.5}
                 className="mt-2 sm:mt-4 text-xl sm:text-2xl md:text-3xl text-muted-foreground"
               >
-                Student Software Engineer
+                Student Software Engineer and Full Stack Developer
               </AnimatedDiv>
               <AnimatedDiv 
                 variant={fadeInUp}

@@ -25,51 +25,50 @@ export const ContactConfirmationEmail = ({
       <Preview>Merci de m'avoir contacté - Ethan Smadja</Preview>
       <Body style={main}>
         <Container style={container}>
-          {/* Header avec accent coloré */}
+          {/* Header moderne avec couleur du site */}
           <Section style={header}>
             <Text style={headerText}>ETHAN SMADJA</Text>
+            <Text style={headerSubtext}>Software Engineer</Text>
           </Section>
-          
+
           {/* Contenu principal */}
           <Section style={content}>
             <Heading style={h1}>Merci pour votre message ✨</Heading>
-            
+
             <Text style={greeting}>Bonjour {name},</Text>
-            
+
             <Text style={text}>
               J'ai bien reçu votre message et je vous en remercie. Je m'engage à vous répondre dans les plus brefs délais.
             </Text>
-            
-            <Section style={highlightBox}>
+
+            {/* Card style comme sur le site */}
+            <Section style={highlightCard}>
               <Text style={highlightText}>
                 💬 Votre message est important pour moi et sera traité avec attention
               </Text>
             </Section>
-            
+
             <Text style={text}>
               En attendant, n'hésitez pas à consulter mon portfolio ou mes projets récents.
             </Text>
 
-            <Link href="https://www.ethansmadja.com">
-              <Text style={link}>
-                https://www.ethansmadja.com/
-              </Text>
-            </Link>
-            
+            {/* Bouton style site web */}
+            <Section style={buttonContainer}>
+              <Link href="https://www.ethansmadja.com" style={button}>
+                <Text style={buttonText}>Visiter mon portfolio</Text>
+              </Link>
+            </Section>
+
             <Hr style={divider} />
-            
+
             <Text style={signature}>
               Cordialement,<br />
               <strong>Ethan Smadja</strong>
             </Text>
-            
-            <Text style={footer}>
-              Software Engineer
-            </Text>
           </Section>
         </Container>
-        
-        {/* Footer */}
+
+        {/* Footer épuré */}
         <Section style={footerSection}>
           <Text style={footerText}>
             Cet email a été envoyé automatiquement. Merci de ne pas y répondre directement.
@@ -82,8 +81,7 @@ export const ContactConfirmationEmail = ({
 
 const main = {
   backgroundColor: "#f8fafc",
-  fontFamily:
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif',
+  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif',
   padding: "40px 20px",
   minHeight: "100vh",
 };
@@ -95,99 +93,118 @@ const container = {
   margin: "0 auto",
   maxWidth: "600px",
   overflow: "hidden",
+  border: "1px solid #e5e7eb",
 };
 
 const header = {
-  backgroundColor: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-  background: "#667eea",
-  padding: "24px 32px",
+  backgroundColor: "#00A", // Couleur principale du site
+  padding: "32px",
   textAlign: "center" as const,
 };
 
 const headerText = {
   color: "#ffffff",
-  fontSize: "18px",
-  fontWeight: "600",
-  letterSpacing: "2px",
-  margin: "0",
+  fontSize: "20px",
+  fontWeight: "700",
+  letterSpacing: "1px",
+  margin: "0 0 8px 0",
   textTransform: "uppercase" as const,
 };
 
+const headerSubtext = {
+  color: "rgba(255, 255, 255, 0.9)",
+  fontSize: "14px",
+  fontWeight: "400",
+  margin: "0",
+  fontStyle: "italic",
+};
+
 const content = {
-  padding: "32px",
+  padding: "40px 32px",
 };
 
 const h1 = {
-  color: "#1f2937",
+  color: "#00A", // Couleur principale du site
   fontSize: "28px",
   fontWeight: "700",
   lineHeight: "34px",
-  margin: "0 0 24px 0",
+  margin: "0 0 32px 0",
   textAlign: "center" as const,
 };
 
 const greeting = {
-  color: "#374151",
+  color: "#1f2937",
   fontSize: "18px",
   fontWeight: "600",
-  margin: "0 0 20px 0",
+  margin: "0 0 24px 0",
 };
 
 const text = {
   color: "#4b5563",
   fontSize: "16px",
   lineHeight: "24px",
-  margin: "16px 0",
+  margin: "20px 0",
 };
 
-const highlightBox = {
-  backgroundColor: "#f0f9ff",
-  border: "1px solid #e0f2fe",
-  borderRadius: "8px",
-  margin: "24px 0",
-  padding: "16px 20px",
-};
-
-const link = {
-  color: "#0c4a6e",
-  fontSize: "15px",
-  fontWeight: "500",
-  lineHeight: "22px",
-  margin: "0",
-  textAlign: "center" as const,
+// Card style comme sur le site
+const highlightCard = {
+  backgroundColor: "#EEEEFF", // Couleur de fond des badges du site
+  border: "1px solid #e0e7ff",
+  borderRadius: "12px",
+  margin: "32px 0",
+  padding: "24px",
 };
 
 const highlightText = {
-  color: "#0c4a6e",
-  fontSize: "15px",
+  color: "#00A", // Couleur principale
+  fontSize: "16px",
   fontWeight: "500",
-  lineHeight: "22px",
+  lineHeight: "24px",
   margin: "0",
   textAlign: "center" as const,
+};
+
+// Bouton style site web
+const buttonContainer = {
+  textAlign: "center" as const,
+  margin: "32px 0",
+};
+
+const button = {
+  backgroundColor: "#00A",
+  borderRadius: "8px",
+  color: "#ffffff",
+  display: "inline-block",
+  fontSize: "16px",
+  fontWeight: "600",
+  lineHeight: "1",
+  padding: "12px 24px",
+  textDecoration: "none",
+  textAlign: "center" as const,
+};
+
+const buttonText = {
+  color: "#ffffff",
+  fontSize: "16px",
+  fontWeight: "600",
+  margin: "0",
 };
 
 const divider = {
   border: "none",
   borderTop: "1px solid #e5e7eb",
-  margin: "32px 0 24px 0",
+  margin: "40px 0 32px 0",
 };
 
 const signature = {
-  color: "#374151",
+  color: "#1f2937",
   fontSize: "16px",
   lineHeight: "24px",
-  margin: "0 0 8px 0",
-};
-
-const footer = {
-  color: "#6b7280",
-  fontSize: "14px",
-  fontStyle: "italic",
   margin: "0",
 };
 
 const footerSection = {
-  margin: "20px auto 0",
+  margin: "32px auto 0",
   maxWidth: "600px",
   textAlign: "center" as const,
 };
@@ -195,7 +212,7 @@ const footerSection = {
 const footerText = {
   color: "#9ca3af",
   fontSize: "12px",
-  lineHeight: "16px",
+  lineHeight: "18px",
   margin: "0",
 };
 

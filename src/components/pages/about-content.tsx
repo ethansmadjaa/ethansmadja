@@ -53,20 +53,27 @@ export function AboutContent() {
               </p>
               <p className="text-base sm:text-lg">
                 My journey in technology began with my studies at ECE Paris, where
-                I developed a strong foundation in mathematics (statistics,
-                probability, linear algebra), programming (C, Python, Java), and
-                web development. During my exchange at Omnes Education London
-                School, I expanded my expertise in finance, management, and
-                machine learning, including a notable project developing a facial
+                I developed a strong foundation in <strong>mathematics</strong> (statistics,
+                probability, linear algebra), <strong>programming</strong> (C, Python, Java), and 
+                 <strong>web development</strong>. During my exchange at Omnes Education London
+                School, I expanded my expertise in <strong>finance</strong>, <strong>management</strong>, and 
+                <strong>machine learning</strong>, including a notable project developing a facial
                 recognition system using MATLAB that could identify individuals
                 from a database of 500 images.
               </p>
               <p className="text-base sm:text-lg">
-                Beyond my technical pursuits, I'm actively involved in community
-                service as a Director at Moadon, where I organize activities for
-                youth (ages 8-17) and manage teams of animators. I'm also
-                passionate about music (piano), sports, and exploring new cultures
-                through travel.
+                I’ve also had the opportunity to complete several <strong>internships</strong>, during which I worked on a wide range of projects across various technologies.
+                My experience spans <strong>web development</strong>, <strong>machine learning</strong>, <strong>IOS</strong>, and <strong>AI</strong>. Notably, I was the first employee at Vocca,
+                a startup that uses <strong>AI</strong> to build agents capable of handling receptionist tasks such as booking,
+                modifying, and canceling patient appointments, as well as answering common questions.
+                The company recently secured <strong>€5 million</strong> in funding and is now expanding its team.
+              </p>
+              <p className="text-base sm:text-lg">
+                Beyond my technical pursuits, I'm actively involved in <strong>community</strong> 
+                service as a Director at Moadon Summer Camps, where I organize activities for the 
+                youth (ages 8-17) and manage teams of camp counsellors. I'm also
+                passionate about <strong>music</strong> (piano), <strong>sports</strong>, and exploring new cultures
+                through <strong>travel</strong>.
               </p>
             </AnimatedDiv>
             <AnimatedDiv 

@@ -19,6 +19,14 @@ export const projects: Project[] = [
     liveUrl: "https://ethansmadja.com"
   },
   {
+    title: "Tablazard",
+    description: "An IOS app to help you manage your reservations as a party organizer",
+    longDescription: "A tool to help you manage your finances, using react native and expo",
+    image: "https://nluextmsrxuxcmwerxkc.supabase.co/storage/v1/object/public/organizers-logos//tablazard-main.jpeg",
+    technologies: ["React Native", "Expo", "Typescript", "IOS", "Web"],
+    githubUrl: "https://github.com/tablazard"
+  },
+  {
     title: "Testing Vocca",
     description: "Platform to test the capabilities of the Vocca AI agents",
     longDescription: "A platform to test the capabilities of the Vocca AI agents, leveraging Ai frameworks like Pipecat-ai, and web frameworks like Next.js and React",
@@ -51,19 +59,11 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/ethansmadjaa/FlashCards"
   },
   {
-    title: "Pricing Vocca",
-    description: "An automated ROI calculator for Vocca",
-    longDescription: "An automated ROI calculator for Vocca, using Next.js and Tailwind CSS",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&auto=format&fit=crop&q=60",
-    technologies: ["Python", "Pipecat-ai", "Daily", "React", "Next.js", "Typescript", "Tailwind CSS", "vercel"],
-    liveUrl: "https://pricing.vocca.ai/"
-  },
-  {
     title: "Vocca Training",
     description: "Internship application project",
     longDescription: "Project showcasing AI development skills using various technologies and APIs for natural language processing and automation.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=450&fit=crop",
-    technologies: ["Python", "OpenAI API", "Google API", "Pipecat-ai", "Daily"],
+    technologies: ["Python", "OpenAI API", "Google API", "Pipecat-ai", "Daily", "Google Cloud", "Google Calendar"],
     githubUrl: "https://github.com/ethansmadjaa/Vocca_training"
   },
   {
