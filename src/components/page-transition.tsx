@@ -23,12 +23,6 @@ const pageVariants = {
   }
 };
 
-const pageTransition = {
-  type: 'tween' as const,
-  ease: 'anticipate',
-  duration: 0.4
-};
-
 export const PageTransition = ({ children }: PageTransitionProps) => {
   const pathname = usePathname();
 
@@ -40,7 +34,11 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
         animate="in"
         exit="out"
         variants={pageVariants}
-        transition={pageTransition}
+        transition={{
+          type: 'tween',
+          ease: 'anticipate',
+          duration: 0.4
+        }}
         className="min-h-screen"
       >
         {children}
