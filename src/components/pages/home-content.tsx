@@ -46,7 +46,7 @@ export function HomeContent() {
                 delay={0.5}
                 className="mt-2 sm:mt-4 text-xl sm:text-2xl md:text-3xl text-muted-foreground"
               >
-                Student Software Engineer and Full Stack Developer
+                Freelance Software Engineer - CTO & Co-Founder of <a href="https://fidjoo.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Fidjoo</a>
               </AnimatedDiv>
               <AnimatedDiv 
                 variant={fadeInUp}
