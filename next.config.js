@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com', 'nluextmsrxuxcmwerxkc.supabase.co'],
+    domains: ['images.unsplash.com', 'nluextmsrxuxcmwerxkc.supabase.co', 'back.fidjoo.com'],
   },
   eslint: {
     ignoreDuringBuilds: true,

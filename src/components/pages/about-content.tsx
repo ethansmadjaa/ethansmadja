@@ -49,32 +49,29 @@ export function AboutContent() {
               className="order-2 space-y-4 md:order-1"
             >
               <p className="text-base sm:text-lg">
-                Hello! I'm Ethan, a passionate student pursuing a Master's in <strong>Data & AI</strong> at ECE Paris. Currently based in Paris, I'm dedicated to creating <strong>innovative solutions</strong> using nowadays technologies and different programming languages.
+                Hello! I'm Ethan, a final-year engineering student specializing in <strong>Data & AI</strong> at ECE Paris, and a builder at heart. I split my time between product, AI engineering, and mobile development, with a strong focus on turning ideas into real, usable products.
               </p>
+
               <p className="text-base sm:text-lg">
-                My journey in technology began with my studies at ECE Paris, where
-                I developed a strong foundation in <strong>mathematics</strong> (statistics,
-                probability, linear algebra), <strong>programming</strong> (C, Python, Java), and 
-                 <strong>web development</strong>. During my exchange at Omnes Education London
-                School, I expanded my expertise in <strong>finance</strong>, <strong>management</strong>, and 
-                <strong>machine learning</strong>, including a notable project developing a facial
-                recognition system using MATLAB that could identify individuals
-                from a database of 500 images.
+                Today, I'm the <strong>Co-Founder & CTO of Fidjoo</strong>, a creative AI platform where children can generate their own animated books. I design the full technical architecture: React Native + Expo, FastAPI microservices, LLM pipelines, Supabase/PostgreSQL, distributed tasks and scalable generation workflows.
               </p>
+
               <p className="text-base sm:text-lg">
-                I’ve also had the opportunity to complete several <strong>internships</strong>, during which I worked on a wide range of projects across various technologies.
-                My experience spans <strong>web development</strong>, <strong>machine learning</strong>, <strong>IOS</strong>, and <strong>AI</strong>. Notably, I was the first employee at Vocca,
-                a startup that uses <strong>AI</strong> to build agents capable of handling receptionist tasks such as booking,
-                modifying, and canceling patient appointments, as well as answering common questions.
-                The company recently secured <strong>€5 million</strong> in funding and is now expanding its team.
+                Alongside Fidjoo, I work as a <strong>freelance software engineer</strong>, helping companies build AI-powered products, automate workflows, and ship robust mobile or web applications fast and clean.
               </p>
+
               <p className="text-base sm:text-lg">
-                Beyond my technical pursuits, I'm actively involved in <strong>community</strong> 
-                service as a Director at Moadon Summer Camps, where I organize activities for the 
-                youth (ages 8-17) and manage teams of camp counsellors. I'm also
-                passionate about <strong>music</strong> (piano), <strong>sports</strong>, and exploring new cultures
-                through <strong>travel</strong>.
+                Previously, I was the <strong>first employee at Vocca AI</strong>, a health-tech startup that recently raised €5M. I built internal tools, integrated medical software, developed Python APIs, processed audio data, and contributed to the core AI receptionist able to schedule, modify, or cancel medical appointments.
               </p>
+
+              <p className="text-base sm:text-lg">
+                My background mixes <strong>mathematics</strong> (statistics, probability, linear algebra), <strong>software engineering</strong> (React, Python, TypeScript), <strong>machine learning</strong>, and <strong>product mindset</strong>. Early in my journey, I also explored finance and management during an exchange in London, and developed several ML projects, including a facial recognition system in MATLAB.
+              </p>
+
+              <p className="text-base sm:text-lg">
+                Outside tech, I'm involved in youth programs as a long-time <strong>Moadon camp director</strong>, and I enjoy <strong>music</strong>, <strong>sports</strong>, and discovering new cultures through <strong>travel</strong>.
+              </p>
+
             </AnimatedDiv>
             <AnimatedDiv 
               variant={scaleIn}

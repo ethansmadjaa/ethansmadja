@@ -10,6 +10,26 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Fidjoo",
+    description: "AI-powered creative storytelling app for kids.",
+    longDescription:
+      "Fidjoo is an AI-driven mobile app that lets children create animated books, combining React Native, Python/FastAPI microservices, PostgreSQL, and advanced LLM pipelines for story generation and multimedia creation.",
+    image:
+      "https://back.fidjoo.com/assets/images/logo/black/black.png",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "iOS",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "NLP Pipelines",
+      "Distributed Tasks"
+    ],
+    liveUrl: "https://fidjoo.com"
+  },
+  {
     title: "Portfolio Website",
     description: "Personal portfolio website built with Next.js and TypeScript",
     longDescription: "A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with Next.js, TypeScript, and Tailwind CSS.",
