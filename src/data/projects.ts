@@ -30,6 +30,25 @@ export const projects: Project[] = [
     liveUrl: "https://fidjoo.com"
   },
   {
+    title: "Dan Systèmes",
+    description: "SEO-optimized landing page for a French IT solutions provider.",
+    longDescription:
+      "Dan Systèmes is a professional landing page for a French electronic and IT reseller, featuring a modern design with Framer Motion animations, contact forms with email integration via Resend, and comprehensive SEO optimization including structured metadata and sitemap generation.",
+    image: "https://www.dansystemes.com/images/logo.png",
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "shadcn/ui",
+      "Framer Motion",
+      "Resend",
+      "Vercel"
+    ],
+    liveUrl: "https://www.dansystemes.com"
+  },
+
+  {
     title: "Portfolio Website",
     description: "Personal portfolio website built with Next.js and TypeScript",
     longDescription: "A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with Next.js, TypeScript, and Tailwind CSS.",

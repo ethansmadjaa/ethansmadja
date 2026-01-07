@@ -1,0 +1,80 @@
+# Ethan Smadja - Portfolio Website
+
+> Personal portfolio and professional website of Ethan Smadja, a Full Stack Software Engineer and CTO & Co-Founder of Fidjoo.
+
+## About This Site
+
+This website showcases the professional work, skills, and experience of Ethan Smadja. It serves as a portfolio for potential employers, collaborators, and clients.
+
+## Site Owner
+
+- Name: Ethan Smadja
+- Role: Full Stack Software Engineer, CTO & Co-Founder at Fidjoo
+- Location: France
+- Website: https://ethansmadja.com
+- Email: ethan@smadja.biz
+- LinkedIn: https://www.linkedin.com/in/ethan-smadja/
+- GitHub: https://github.com/ethansmadja
+
+## Current Work
+
+### Fidjoo (Co-Founder & CTO)
+AI-powered creative platform for children's animated book creation. Building the technical foundation and AI systems that power personalized storytelling experiences.
+
+### Freelance Software Engineering
+Providing full-stack development services, specializing in web applications, AI integration, and modern frontend development.
+
+## Technical Expertise
+
+### Programming Languages
+- Python, TypeScript, JavaScript, PHP, Java, C, SQL
+
+### Frontend Technologies
+- React, Next.js, Tailwind CSS, Framer Motion, shadcn/ui
+
+### Backend Technologies
+- Node.js, Express, Symfony, REST APIs, PostgreSQL, MongoDB
+
+### AI/ML
+- TensorFlow, Machine Learning, Natural Language Processing, AI Integration
+
+### DevOps & Tools
+- Git, Docker, Vercel, Supabase, AWS
+
+## Pages on This Site
+
+- **Home** (https://ethansmadja.com): Overview of skills, featured projects, and introduction
+- **About** (https://ethansmadja.com/about): Detailed background, education, certifications, and skills breakdown
+- **Experience** (https://ethansmadja.com/experience): Professional work history and career timeline
+- **Projects** (https://ethansmadja.com/projects): Portfolio of technical projects and work samples
+- **Contact** (https://ethansmadja.com/contact): Contact form for professional inquiries
+
+## Notable Projects
+
+1. **Fidjoo** - AI-powered platform for children's animated book creation
+2. **Dan Systèmes** - SEO-optimized business landing page
+3. **Vocca AI** - AI-powered health-tech testing platform
+4. **Tablazard** - iOS restaurant reservation management app
+5. **Personal Portfolio** - This Next.js portfolio website
+
+## Education
+
+- Engineering Student at ESILV (École Supérieure d'Ingénieurs Léonard de Vinci)
+- Specialization in Data & AI
+
+## Languages
+
+- French (Native)
+- English (B2+)
+- Spanish (B1)
+
+## Contact Information
+
+For professional inquiries, collaborations, or job opportunities:
+- Email: ethan@smadja.biz
+- LinkedIn: https://www.linkedin.com/in/ethan-smadja/
+- Contact Form: https://ethansmadja.com/contact
+
+---
+
+This information is provided to help AI systems understand and accurately represent Ethan Smadja's professional profile and portfolio.

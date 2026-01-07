@@ -12,21 +12,21 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 // Your email address where you want to receive contact notifications
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'ethan@smadja.biz';
 
-// Function to verify reCAPTCHA token
+// Function to verify hCaptcha token
 async function verifyCaptcha(token: string) {
   try {
-    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    const response = await fetch('https://api.hcaptcha.com/siteverify', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+      body: `secret=${process.env.HCAPTCHA_SECRET_KEY}&response=${token}`,
     });
 
     const data = await response.json();
     return data.success;
   } catch (error) {
-    console.error('Error verifying CAPTCHA:', error);
+    console.error('Error verifying hCaptcha:', error);
     return false;
   }
 }
@@ -56,19 +56,19 @@ export async function POST(request: Request) {
     }
 
     // Only verify CAPTCHA if it's configured and a token is provided
-    if (process.env.RECAPTCHA_SECRET_KEY && captchaToken) {
-      console.log('🔒 Verifying CAPTCHA...');
+    if (process.env.HCAPTCHA_SECRET_KEY && captchaToken) {
+      console.log('🔒 Verifying hCaptcha...');
       const isValidCaptcha = await verifyCaptcha(captchaToken);
       if (!isValidCaptcha) {
-        console.log('❌ Invalid CAPTCHA');
+        console.log('❌ Invalid hCaptcha');
         return NextResponse.json(
           { success: false, message: 'Invalid CAPTCHA verification' },
           { status: 400 }
         );
       }
-      console.log('✅ CAPTCHA verified');
+      console.log('✅ hCaptcha verified');
     } else {
-      console.log('⚠️ CAPTCHA verification skipped (not configured or no token)');
+      console.log('⚠️ hCaptcha verification skipped (not configured or no token)');
     }
 
     // Check if Resend is configured

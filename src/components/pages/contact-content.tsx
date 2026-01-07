@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Github, Linkedin, MapPin } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
 import { useToast } from "@/hooks/use-toast"
-import ReCAPTCHA from "react-google-recaptcha"
+import HCaptcha from "@hcaptcha/react-hcaptcha"
 import { 
   AnimatedDiv, 
   AnimatedSection, 
@@ -24,18 +24,13 @@ import { PageWrapper } from "@/components/page-wrapper";
 export function ContactContent() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const hcaptchaRef = useRef<HCaptcha>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
-
-  // Add debug logging
-  useEffect(() => {
-    console.log('reCAPTCHA Site Key:', process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
-  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -48,10 +43,10 @@ export function ContactContent() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Get the CAPTCHA token only if reCAPTCHA is configured
-    const captchaToken = recaptchaRef.current?.getValue();
+    // Get the CAPTCHA token only if hCaptcha is configured
+    const captchaToken = hcaptchaRef.current?.getResponse();
 
-    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && !captchaToken) {
+    if (process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY && !captchaToken) {
       toast({
         title: "Error",
         description: "Please complete the CAPTCHA verification",
@@ -89,7 +84,7 @@ export function ContactContent() {
           subject: '',
           message: ''
         });
-        recaptchaRef.current?.reset();
+        hcaptchaRef.current?.resetCaptcha();
       } else {
         toast({
           title: "Error",
@@ -108,9 +103,9 @@ export function ContactContent() {
     }
   };
 
-  // Add error handling for reCAPTCHA
-  const handleRecaptchaError = () => {
-    console.error('reCAPTCHA error occurred');
+  // Add error handling for hCaptcha
+  const handleCaptchaError = () => {
+    console.error('hCaptcha error occurred');
     toast({
       title: "Error",
       description: "There was an error loading the CAPTCHA. Please refresh the page.",
@@ -259,13 +254,13 @@ export function ContactContent() {
                         />
                       </AnimatedDiv>
 
-                      {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                      {process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY && (
                         <AnimatedDiv variant={fadeInUp} delay={0.8} className="flex justify-center">
-                          <ReCAPTCHA
-                            ref={recaptchaRef}
-                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                          <HCaptcha
+                            ref={hcaptchaRef}
+                            sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY}
                             theme="light"
-                            onErrored={handleRecaptchaError}
+                            onError={handleCaptchaError}
                           />
                         </AnimatedDiv>
                       )}
