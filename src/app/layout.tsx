@@ -7,6 +7,8 @@ import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { PersonJsonLd, WebsiteJsonLd } from "@/components/json-ld";
+import { Analytics } from "@vercel/analytics/next"
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -141,6 +143,7 @@ export default function RootLayout({
           </div>
           <Toaster />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
