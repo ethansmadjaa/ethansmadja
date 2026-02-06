@@ -81,8 +81,8 @@ export function AboutContent() {
               <Image
                 src="/profile.jpg"
                 alt="Ethan Smadja"
-                width={240}
-                height={240}
+                width={300}
+                height={300}
                 className="rounded-lg object-cover sm:w-[300px] sm:h-[300px]"
                 priority
               />
