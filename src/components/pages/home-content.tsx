@@ -118,7 +118,7 @@ export function HomeContent() {
                         {project.description}
                       </CardDescription>
                     </CardHeader>
-                    <CardContent className="flex-grow px-4 pb-0 sm:px-6">
+                    <CardContent className="grow px-4 pb-0 sm:px-6">
                       <p className="mb-4 text-sm text-muted-foreground">
                         {project.longDescription}
                       </p>
