@@ -101,76 +101,74 @@ export function HomeContent() {
           <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {projects.slice(0, 3).map((project) => (
               <StaggerItem key={project.title}>
-                <AnimatedCard className="flex flex-col overflow-hidden">
-                  <Card className="flex flex-col overflow-hidden h-full">
-                    <div className="relative aspect-video overflow-hidden">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                    </div>
-                    <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
-                      <CardTitle className="text-lg">{project.title}</CardTitle>
-                      <CardDescription className="text-sm">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="grow px-4 pb-0 sm:px-6">
-                      <p className="mb-4 text-sm text-muted-foreground">
-                        {project.longDescription}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <Badge key={tech} className="text-white bg-primary">
-                            {tech}
-                          </Badge>
-                        ))}
+                <Link href={`/projects/${project.slug}`} className="block h-full">
+                  <AnimatedCard className="flex flex-col overflow-hidden h-full">
+                    <Card className="flex flex-col overflow-hidden h-full">
+                      <div className="relative aspect-video overflow-hidden">
+                        <Image
+                          src={typeof project.image === 'string' ? project.image : project.image[0]}
+                          alt={project.title}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-300 hover:scale-105"
+                        />
                       </div>
-                    </CardContent>
-                    <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
-                      {project.githubUrl && (
-                        <AnimatedButton>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            asChild
-                            className="flex-1 sm:flex-none"
-                          >
-                            <Link
-                              href={project.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                      <CardHeader className="px-4 py-4 sm:px-6 sm:py-5">
+                        <CardTitle className="text-lg">{project.title}</CardTitle>
+                        <CardDescription className="text-sm">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="grow px-4 pb-0 sm:px-6">
+                        <p className="mb-4 text-sm text-muted-foreground">
+                          {project.longDescription}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <Badge key={tech} className="text-white bg-primary">
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardContent>
+                      <CardFooter className="flex flex-wrap gap-2 px-4 py-4 sm:px-6 sm:py-5">
+                        {project.githubUrl && (
+                          <AnimatedButton>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="flex-1 sm:flex-none"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+                              }}
                             >
                               <Github className="mr-2 h-4 w-4" />
                               Code
-                            </Link>
-                          </Button>
-                        </AnimatedButton>
-                      )}
-                      {project.liveUrl && (
-                        <AnimatedButton>
-                          <Button
-                            size="sm"
-                            asChild
-                            className="flex-1 sm:flex-none bg-primary text-white hover:bg-primary/80"
-                          >
-                            <Link
-                              href={project.liveUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                            </Button>
+                          </AnimatedButton>
+                        )}
+                        {project.liveUrl && (
+                          <AnimatedButton>
+                            <Button
+                              size="sm"
+                              className="flex-1 sm:flex-none bg-primary text-white hover:bg-primary/80"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+                              }}
                             >
                               <ArrowUpRight className="mr-2 h-4 w-4" />
                               Live Site
-                            </Link>
-                          </Button>
-                        </AnimatedButton>
-                      )}
-                    </CardFooter>
-                  </Card>
-                </AnimatedCard>
+                            </Button>
+                          </AnimatedButton>
+                        )}
+                      </CardFooter>
+                    </Card>
+                  </AnimatedCard>
+                </Link>
               </StaggerItem>
             ))}
           </StaggerContainer>

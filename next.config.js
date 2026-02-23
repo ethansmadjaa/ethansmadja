@@ -19,6 +19,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.dansystemes.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'coach2train.com',
+      },
     ],
   },
   eslint: {
