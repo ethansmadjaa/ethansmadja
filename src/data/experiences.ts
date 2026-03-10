@@ -10,19 +10,44 @@ export interface Experience {
 }
 export const experiences: Experience[] = [
   {
+    title: "Founder & AI Launch Coach",
+    company: "VibeStack",
+    location: "Paris, France",
+    startDate: "Feb 2026",
+    endDate: "Present",
+    description:
+      "1-on-1 coaching that helps non-technical entrepreneurs go from idea to working product using AI. One session, one full setup, one clear way to build.",
+    responsibilities: [
+      "Setting up complete development environments tailored to each founder's product",
+      "Teaching the right AI tools and workflows to build independently",
+      "Guiding founders from zero to a shippable MVP in a single session",
+      "Making tech startups accessible to anyone with an idea — not just those who code"
+    ],
+    technologies: [
+      "Cursor",
+      "v0",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Vercel",
+      "AI/LLM Tools"
+    ]
+  },
+  {
     title: "Co-Founder & CTO",
     company: "Fidjoo",
     location: "Paris, France",
     startDate: "Oct 2025",
-    endDate: "Present",
+    endDate: "Feb 2026",
     description:
-      "Leading the technical vision and development of Fidjoo, an AI-powered creative platform enabling children to generate animated books.",
+      "Led the technical vision and development of Fidjoo, an AI-powered creative platform enabling children to generate animated books.",
     responsibilities: [
-      "Architecting the full technical ecosystem: React Native, Expo, FastAPI microservices, Supabase/PostgreSQL",
-      "Designing and maintaining LLM pipelines for story, image, and video generation",
-      "Managing distributed tasks, caching layers, and scalable workflows",
-      "Building the mobile app experience and supervising UX/UI integration",
-      "Coordinating with designers, developers, and external partners"
+      "Architected the full technical ecosystem: React Native, Expo, FastAPI microservices, Supabase/PostgreSQL",
+      "Designed and maintained LLM pipelines for story, image, and video generation",
+      "Managed distributed tasks, caching layers, and scalable workflows",
+      "Built the mobile app experience and supervised UX/UI integration",
+      "Coordinated with designers, developers, and external partners"
     ],
     technologies: [
       "React Native",
