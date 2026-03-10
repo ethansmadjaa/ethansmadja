@@ -53,11 +53,11 @@ export function AboutContent() {
               </p>
 
               <p className="text-base sm:text-lg">
-                Today, I'm the <strong>Co-Founder & CTO of Fidjoo</strong>, a creative AI platform where children can generate their own animated books. I design the full technical architecture: React Native + Expo, FastAPI microservices, LLM pipelines, Supabase/PostgreSQL, distributed tasks and scalable generation workflows.
+                Today, I'm the <strong>Founder of VibeStack</strong>, where I help non-technical entrepreneurs go from idea to working product using AI. Through 1-on-1 coaching sessions, I set up complete development environments, teach the right AI tools, and give founders a clear workflow to build and ship independently.
               </p>
 
               <p className="text-base sm:text-lg">
-                Alongside Fidjoo, I work as a <strong>freelance software engineer</strong>, helping companies build AI-powered products, automate workflows, and ship robust mobile or web applications fast and clean.
+                Previously, I co-founded <strong>Fidjoo</strong>, an AI-powered creative platform where children could generate their own animated books. I designed the full technical architecture: React Native + Expo, FastAPI microservices, LLM pipelines, Supabase/PostgreSQL, distributed tasks and scalable generation workflows.
               </p>
 
               <p className="text-base sm:text-lg">
