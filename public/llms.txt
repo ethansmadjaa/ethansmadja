@@ -1,6 +1,6 @@
 # Ethan Smadja - Portfolio Website
 
-> Personal portfolio and professional website of Ethan Smadja, a Full Stack Software Engineer and CTO & Co-Founder of Fidjoo.
+> Personal portfolio and professional website of Ethan Smadja, a Software Engineer and Founder of VibeStack.
 
 ## About This Site
 
@@ -9,7 +9,7 @@ This website showcases the professional work, skills, and experience of Ethan Sm
 ## Site Owner
 
 - Name: Ethan Smadja
-- Role: Full Stack Software Engineer, CTO & Co-Founder at Fidjoo
+- Role: Software Engineer, Founder of VibeStack
 - Location: France
 - Website: https://ethansmadja.com
 - Email: ethan@smadja.biz
@@ -18,11 +18,16 @@ This website showcases the professional work, skills, and experience of Ethan Sm
 
 ## Current Work
 
-### Fidjoo (Co-Founder & CTO)
-AI-powered creative platform for children's animated book creation. Building the technical foundation and AI systems that power personalized storytelling experiences.
+### VibeStack (Founder & AI Launch Coach)
+1-on-1 coaching that helps non-technical entrepreneurs go from idea to working product using AI. One session, one full setup, one clear way to build.
 
 ### Freelance Software Engineering
 Providing full-stack development services, specializing in web applications, AI integration, and modern frontend development.
+
+## Past Work
+
+### Fidjoo (Co-Founder & CTO, Oct 2025 – Feb 2026)
+Led the technical vision and development of an AI-powered creative platform enabling children to generate animated books.
 
 ## Technical Expertise
 
@@ -59,7 +64,7 @@ Providing full-stack development services, specializing in web applications, AI 
 
 ## Education
 
-- Engineering Student at ESILV (École Supérieure d'Ingénieurs Léonard de Vinci)
+- Engineering Student at ECE Paris
 - Specialization in Data & AI
 
 ## Languages
