@@ -9,11 +9,10 @@ export function PersonJsonLd() {
       'https://www.linkedin.com/in/ethan-smadja/',
       'https://github.com/ethansmadja',
     ],
-    jobTitle: ['CTO & Co-Founder', 'Full Stack Software Engineer'],
+    jobTitle: ['Founder of VibeStack', 'Software Engineer'],
     worksFor: {
       '@type': 'Organization',
-      name: 'Fidjoo',
-      url: 'https://fidjoo.com',
+      name: 'VibeStack',
     },
     alumniOf: {
       '@type': 'EducationalOrganization',
@@ -45,7 +44,7 @@ export function WebsiteJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Ethan Smadja Portfolio',
-    description: 'Professional portfolio and personal website of Ethan Smadja, Full Stack Software Engineer and CTO & Co-Founder of Fidjoo.',
+    description: 'Professional portfolio and personal website of Ethan Smadja, Software Engineer and Founder of VibeStack.',
     url: 'https://ethansmadja.com',
     author: {
       '@type': 'Person',
@@ -93,7 +92,7 @@ export function ProfilePageJsonLd() {
     mainEntity: {
       '@type': 'Person',
       name: 'Ethan Smadja',
-      description: 'Full Stack Software Engineer and CTO & Co-Founder of Fidjoo',
+      description: 'Software Engineer and Founder of VibeStack',
       image: 'https://ethansmadja.com/profile.jpg',
       sameAs: [
         'https://www.linkedin.com/in/ethan-smadja/',
@@ -114,14 +113,12 @@ export function OrganizationJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Fidjoo',
-    url: 'https://fidjoo.com',
-    logo: 'https://fidjoo.com/logo.png',
+    name: 'VibeStack',
     founder: {
       '@type': 'Person',
       name: 'Ethan Smadja',
     },
-    description: 'AI-powered creative platform for children\'s animated book creation.',
+    description: '1-on-1 coaching helping non-technical entrepreneurs go from idea to working product using AI.',
   };
 
   return (
