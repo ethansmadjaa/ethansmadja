@@ -10,7 +10,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";  
 import { Badge } from "@/components/ui/badge";
-import { Github, ArrowUpRight } from "lucide-react";
+import { Github, ArrowUpRight, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/projects";
@@ -33,9 +34,32 @@ export function HomeContent() {
       <div className="flex flex-col min-h-screen">
         <section
           id="hero"
-          className="flex flex-col items-center justify-center px-4 pt-20 sm:pt-36 md:pt-40 lg:pt-44 pb-8 sm:pb-12 md:pb-20 lg:pb-24 min-h-[85vh]"
+          className="relative overflow-hidden flex flex-col items-center justify-center px-4 pt-20 sm:pt-36 md:pt-40 lg:pt-44 pb-8 sm:pb-12 md:pb-20 lg:pb-24 min-h-screen"
         >
-          <div className="container mx-auto flex flex-col items-center text-center">
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: 'linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--background)) 50%, rgba(255,255,255,0) 100%), radial-gradient(ellipse at 50% 120%, hsl(var(--primary)) 0%, hsl(var(--background)) 80%)',
+              opacity: 0.7
+            }}
+          >
+            <div
+              style={{
+                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 70%)',
+                backgroundImage: 'repeating-conic-gradient(from 0deg at 50% 100%, hsl(var(--primary)) 0deg, hsl(var(--primary)) 2deg, transparent 2deg, transparent 10deg)',
+                bottom: '-20%',
+                height: '100%',
+                left: '50%',
+                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%)',
+                opacity: 0.2,
+                pointerEvents: 'none',
+                position: 'absolute',
+                transform: 'translateX(-50%)',
+                width: '200%'
+              }}
+            />
+          </div>
+          <div className="container mx-auto flex flex-col items-center text-center relative z-10">
             <div className="mx-auto max-w-3xl">
               <AnimatedText
                 text="Ethan Smadja"
@@ -46,15 +70,14 @@ export function HomeContent() {
                 delay={0.5}
                 className="mt-2 sm:mt-4 text-xl sm:text-2xl md:text-3xl text-muted-foreground"
               >
-                Freelance Software Engineer - CTO & Co-Founder of <a href="https://fidjoo.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Fidjoo</a>
+                Software Engineer & Founder of VibeStack
               </AnimatedDiv>
               <AnimatedDiv 
                 variant={fadeInUp}
                 delay={0.7}
                 className="mx-auto mt-4 max-w-[700px] text-base sm:text-lg md:text-xl text-muted-foreground"
               >
-                I build innovative solutions with a focus on clean, efficient, and
-                maintainable code.
+                I help non-technical founders turn ideas into real products using AI.
               </AnimatedDiv>
               <AnimatedDiv 
                 variant={fadeInUp}
@@ -67,7 +90,7 @@ export function HomeContent() {
                     size="lg"
                     className="text-base px-8 bg-[#00A] hover:bg-[#0077cc] text-white"
                   >
-                    <Link href="/contact">Get in Touch</Link>
+                    <Link href="/contact">Launch Your product Today</Link>
                   </Button>
                 </AnimatedButton>
                 <AnimatedButton>
@@ -83,9 +106,17 @@ export function HomeContent() {
               </AnimatedDiv>
             </div>
           </div>
+          <motion.div
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 cursor-pointer"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            onClick={() => document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            <ChevronDown className="h-8 w-8 text-muted-foreground" />
+          </motion.div>
         </section>
 
-        <AnimatedSection className="container space-y-8 px-4 py-8 sm:py-12 md:py-16 lg:py-20">
+        <AnimatedSection id="featured-projects" className="container space-y-8 px-4 py-8 sm:py-12 md:py-16 lg:py-20">
           <AnimatedDiv 
             variant={fadeInUp}
             className="mx-auto flex max-w-[750px] flex-col items-center gap-4"
