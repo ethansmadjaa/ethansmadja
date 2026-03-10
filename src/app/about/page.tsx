@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about Ethan Smadja - Full Stack Software Engineer, CTO & Co-Founder of Fidjoo. Discover my background, education at ESILV, technical skills, and professional journey.',
+  description: 'Learn more about Ethan Smadja - Software Engineer and Founder of VibeStack. Discover my background, education at ECE Paris, technical skills, and professional journey.',
   alternates: {
     canonical: 'https://ethansmadja.com/about',
   },

@@ -25,16 +25,16 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://ethansmadja.com'),
   title: {
-    default: 'Ethan Smadja | Full Stack Software Engineer & CTO',
+    default: 'Ethan Smadja | Software Engineer & Founder of VibeStack',
     template: '%s | Ethan Smadja',
   },
-  description: 'Professional portfolio of Ethan Smadja, Full Stack Software Engineer and CTO & Co-Founder of Fidjoo. Specializing in React, Next.js, TypeScript, Python, and AI/ML solutions.',
+  description: 'Professional portfolio of Ethan Smadja, Software Engineer and Founder of VibeStack. Specializing in React, Next.js, TypeScript, Python, and AI/ML solutions.',
   keywords: [
     'Ethan Smadja',
     'Software Engineer',
     'Full Stack Developer',
-    'CTO',
-    'Fidjoo',
+    'VibeStack',
+    'AI Coach',
     'React Developer',
     'Next.js Developer',
     'TypeScript',
@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://ethansmadja.com',
     siteName: 'Ethan Smadja',
-    title: 'Ethan Smadja | Full Stack Software Engineer & CTO',
-    description: 'Professional portfolio of Ethan Smadja, Full Stack Software Engineer and CTO & Co-Founder of Fidjoo. Explore projects, skills, and experience.',
+    title: 'Ethan Smadja | Software Engineer & Founder of VibeStack',
+    description: 'Professional portfolio of Ethan Smadja, Software Engineer and Founder of VibeStack. Explore projects, skills, and experience.',
     images: [
       {
         url: '/og-image.jpg',
@@ -75,8 +75,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ethan Smadja | Full Stack Software Engineer & CTO',
-    description: 'Professional portfolio of Ethan Smadja, Full Stack Software Engineer and CTO & Co-Founder of Fidjoo.',
+    title: 'Ethan Smadja | Software Engineer & Founder of VibeStack',
+    description: 'Professional portfolio of Ethan Smadja, Software Engineer and Founder of VibeStack.',
     images: ['/og-image.jpg'],
     creator: '@ethansmadja',
   },
