@@ -9,3 +9,5 @@ node_modules
 .DS_Store
 yarn.lock
 package-lock.json
+tsconfig.tsbuildinfo
+.claude/settings.local.json

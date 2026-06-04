@@ -34,26 +34,26 @@ function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
 
   if (images.length === 1) {
     return (
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative aspect-video overflow-hidden bg-muted/30">
         <Image
           src={images[0]}
           alt={alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 hover:scale-105"
+          className="object-contain p-3 transition-transform duration-300 hover:scale-[1.03]"
         />
       </div>
     );
   }
 
   return (
-    <div className="relative aspect-video overflow-hidden group">
+    <div className="relative aspect-video overflow-hidden bg-muted/30 group">
       <Image
         src={images[current]}
         alt={`${alt} (${current + 1}/${images.length})`}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        className="object-cover transition-all duration-300"
+        className="object-contain p-3 transition-all duration-300"
       />
       <button
         onClick={(e) => { e.preventDefault(); prev(); }}

@@ -27,30 +27,32 @@ function getOrientation(w: number, h: number): Orientation {
   return "square";
 }
 
-function BentoImage({
+/**
+ * A single gallery tile.
+ *
+ * Keeps each image at its own aspect ratio (detected on load) and uses
+ * `object-contain` on a soft frame, so logos, landscape screenshots and
+ * portrait phone shots all display fully — never cropped, never oversized.
+ * Tiles flow in a masonry layout, so varied heights pack together for a
+ * dynamic-but-compact gallery.
+ */
+function GalleryImage({
   src,
   alt,
-  sizes,
-  priority = false,
-  onOrientationDetected,
+  index,
+  onClick,
 }: {
   src: string;
   alt: string;
-  sizes: string;
-  priority?: boolean;
-  onOrientationDetected?: (o: Orientation) => void;
+  index: number;
+  onClick: () => void;
 }) {
   const [orientation, setOrientation] = useState<Orientation | null>(null);
 
-  const handleLoad = useCallback(
-    (e: SyntheticEvent<HTMLImageElement>) => {
-      const img = e.target as HTMLImageElement;
-      const o = getOrientation(img.naturalWidth, img.naturalHeight);
-      setOrientation(o);
-      onOrientationDetected?.(o);
-    },
-    [onOrientationDetected, src]
-  );
+  const handleLoad = useCallback((e: SyntheticEvent<HTMLImageElement>) => {
+    const img = e.target as HTMLImageElement;
+    setOrientation(getOrientation(img.naturalWidth, img.naturalHeight));
+  }, []);
 
   const aspectClass = {
     landscape: "aspect-video",
@@ -59,25 +61,24 @@ function BentoImage({
   }[orientation ?? "landscape"];
 
   return (
-    <div className="relative overflow-hidden">
-      {!orientation && (
-        <div className="aspect-video animate-pulse bg-muted rounded-sm" />
-      )}
-      <div
-        className={`relative ${aspectClass} ${!orientation ? "absolute inset-0 opacity-0" : ""}`}
-      >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes={sizes}
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-          priority={priority}
-          onLoad={handleLoad}
-        />
-        <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      </div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 14 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.05 + index * 0.06, duration: 0.4, ease: "easeOut" }}
+      onClick={onClick}
+      className={`group relative mb-3 lg:mb-4 break-inside-avoid cursor-pointer overflow-hidden rounded-2xl border bg-muted/30 ${aspectClass}`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        className="object-contain p-2 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+        priority={index === 0}
+        onLoad={handleLoad}
+      />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/15 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+    </motion.div>
   );
 }
 
@@ -116,43 +117,9 @@ function ImageLightbox({
   );
 }
 
-/**
- * Determines the best grid layout based on detected orientations.
- *
- * Layouts:
- * - "hero-side": hero (8 cols, row-span-2) + 2 side images (4 cols each) — all landscape/square
- * - "portrait-row": all images in a row of equal cols — when any image is portrait
- * - "single": single image full width
- * - "pending": still loading orientations
- */
-type LayoutMode = "hero-side" | "portrait-row" | "single" | "pending";
-
-function resolveLayout(
-  imageCount: number,
-  orientations: Record<number, Orientation>
-): LayoutMode {
-  if (imageCount <= 1) return "single";
-
-  const detected = Object.keys(orientations).length;
-  if (detected < Math.min(imageCount, 3)) return "pending";
-
-  const hasPortrait = Object.values(orientations).some((o) => o === "portrait");
-  if (hasPortrait) return "portrait-row";
-  return "hero-side";
-}
-
 export function ProjectDetailContent({ project }: { project: Project }) {
   const images = typeof project.image === "string" ? [project.image] : project.image;
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
-  const [orientations, setOrientations] = useState<Record<number, Orientation>>({});
-
-  const handleOrientation = useCallback((index: number, o: Orientation) => {
-    setOrientations((prev) => ({ ...prev, [index]: o }));
-  }, []);
-
-  const displayImages = images.slice(0, 3);
-  const extraImages = images.slice(3);
-  const layout = resolveLayout(images.length, orientations);
 
   return (
     <PageWrapper>
@@ -245,101 +212,21 @@ export function ProjectDetailContent({ project }: { project: Project }) {
             )}
           </AnimatedDiv>
 
-          {/* ── Images section ── */}
-          {layout === "single" && (
-            <AnimatedDiv
-              variant={fadeInUp}
-              delay={0.1}
-              className="group cursor-pointer overflow-hidden rounded-2xl border md:col-span-12"
-              onClick={() => setLightboxImage(images[0])}
-            >
-              <BentoImage
-                src={images[0]}
-                alt={project.title}
-                sizes="100vw"
-                priority
-                onOrientationDetected={(o) => handleOrientation(0, o)}
-              />
-            </AnimatedDiv>
-          )}
-
-          {(layout === "hero-side" || layout === "pending") && images.length > 1 && (
-            <>
-              {/* Hero — 8 cols, spans 2 rows */}
-              <AnimatedDiv
-                variant={fadeInUp}
-                delay={0.1}
-                className="group cursor-pointer overflow-hidden rounded-2xl border md:col-span-8 md:row-span-2"
-                onClick={() => setLightboxImage(images[0])}
-              >
-                <BentoImage
-                  src={images[0]}
-                  alt={project.title}
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                  priority
-                  onOrientationDetected={(o) => handleOrientation(0, o)}
-                />
-              </AnimatedDiv>
-              {/* Side image 1 */}
-              {displayImages.length >= 2 && (
-                <AnimatedDiv
-                  variant={slideInRight}
-                  delay={0.15}
-                  className="group cursor-pointer overflow-hidden rounded-2xl border md:col-span-4"
-                  onClick={() => setLightboxImage(images[1])}
-                >
-                  <BentoImage
-                    src={images[1]}
-                    alt={`${project.title} — 2`}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    onOrientationDetected={(o) => handleOrientation(1, o)}
-                  />
-                </AnimatedDiv>
-              )}
-              {/* Side image 2 */}
-              {displayImages.length >= 3 && (
-                <AnimatedDiv
-                  variant={slideInRight}
-                  delay={0.25}
-                  className="group cursor-pointer overflow-hidden rounded-2xl border md:col-span-4"
-                  onClick={() => setLightboxImage(images[2])}
-                >
-                  <BentoImage
-                    src={images[2]}
-                    alt={`${project.title} — 3`}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    onOrientationDetected={(o) => handleOrientation(2, o)}
-                  />
-                </AnimatedDiv>
-              )}
-            </>
-          )}
-
-          {layout === "portrait-row" && (
-            <>
-              {/* All images in equal columns — portrait-friendly */}
-              {displayImages.map((img, i) => {
-                // Distribute cols evenly: 2 images → 6+6, 3 images → 4+4+4
-                const colSpan = displayImages.length === 2 ? "md:col-span-6" : "md:col-span-4";
-                return (
-                  <AnimatedDiv
-                    key={i}
-                    variant={i === 0 ? fadeInUp : slideInRight}
-                    delay={0.1 + i * 0.1}
-                    className={`group cursor-pointer overflow-hidden rounded-2xl border ${colSpan}`}
+          {/* ── Gallery (masonry) ── */}
+          {images.length > 0 && (
+            <div className="md:col-span-12">
+              <div className="columns-1 gap-3 sm:columns-2 lg:columns-3 lg:gap-4">
+                {images.map((img, i) => (
+                  <GalleryImage
+                    key={`${img}-${i}`}
+                    src={img}
+                    alt={i === 0 ? project.title : `${project.title} — ${i + 1}`}
+                    index={i}
                     onClick={() => setLightboxImage(img)}
-                  >
-                    <BentoImage
-                      src={img}
-                      alt={i === 0 ? project.title : `${project.title} — ${i + 1}`}
-                      sizes={`(max-width: 768px) 100vw, ${Math.round(100 / displayImages.length)}vw`}
-                      priority={i === 0}
-                      onOrientationDetected={(o) => handleOrientation(i, o)}
-                    />
-                  </AnimatedDiv>
-                );
-              })}
-            </>
+                  />
+                ))}
+              </div>
+            </div>
           )}
 
           {/* ── Description ── */}
@@ -462,23 +349,6 @@ export function ProjectDetailContent({ project }: { project: Project }) {
               </ul>
             </AnimatedDiv>
           )}
-
-          {/* ── Extra images (4+) in pairs ── */}
-          {extraImages.map((img, i) => (
-            <AnimatedDiv
-              key={i}
-              variant={fadeInUp}
-              delay={0.15 + i * 0.08}
-              className="group cursor-pointer overflow-hidden rounded-2xl border md:col-span-6"
-              onClick={() => setLightboxImage(img)}
-            >
-              <BentoImage
-                src={img}
-                alt={`${project.title} — ${i + 4}`}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </AnimatedDiv>
-          ))}
         </div>
       </div>
 
