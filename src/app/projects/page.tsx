@@ -4,19 +4,19 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Explore Ethan Smadja\'s portfolio of projects - VibeStack, Fidjoo, Dan Systèmes, Vocca AI, and more. View technical work in React, Next.js, Python, and AI/ML.',
+  description: 'Explore Ethan Smadja\'s portfolio of projects - Fidjoo, Dan Systèmes, Vocca AI, and more. View technical work in React, Next.js, Python, and AI/ML.',
   alternates: {
     canonical: 'https://ethansmadja.com/projects',
   },
   openGraph: {
     title: 'Projects & Portfolio | Ethan Smadja',
-    description: 'Explore Ethan Smadja\'s portfolio of projects - VibeStack, Fidjoo, web applications, and AI/ML solutions.',
+    description: 'Explore Ethan Smadja\'s portfolio of projects - Fidjoo, web applications, and AI/ML solutions.',
     url: 'https://ethansmadja.com/projects',
     type: 'website',
   },
   twitter: {
     title: 'Projects & Portfolio | Ethan Smadja',
-    description: 'Explore Ethan Smadja\'s portfolio of projects - VibeStack, Fidjoo, web applications, and AI/ML solutions.',
+    description: 'Explore Ethan Smadja\'s portfolio of projects - Fidjoo, web applications, and AI/ML solutions.',
   },
 };
 

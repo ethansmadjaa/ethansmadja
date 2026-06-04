@@ -53,7 +53,7 @@ export function AboutContent() {
               </p>
 
               <p className="text-base sm:text-lg">
-                Today, I'm the <strong>Founder of VibeStack</strong>, where I help non-technical entrepreneurs go from idea to working product using AI. Through 1-on-1 coaching sessions, I set up complete development environments, teach the right AI tools, and give founders a clear workflow to build and ship independently.
+                Today, I'm a <strong>Software Engineer at Just</strong> (getjust.eu), where I build full-stack, AI-powered features across web and backend and ship them to production.
               </p>
 
               <p className="text-base sm:text-lg">

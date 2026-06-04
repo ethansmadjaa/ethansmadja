@@ -9,10 +9,11 @@ export function PersonJsonLd() {
       'https://www.linkedin.com/in/ethan-smadja/',
       'https://github.com/ethansmadja',
     ],
-    jobTitle: ['Founder of VibeStack', 'Software Engineer'],
+    jobTitle: ['Software Engineer'],
     worksFor: {
       '@type': 'Organization',
-      name: 'VibeStack',
+      name: 'Just',
+      url: 'https://getjust.eu',
     },
     alumniOf: {
       '@type': 'EducationalOrganization',
@@ -44,7 +45,7 @@ export function WebsiteJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Ethan Smadja Portfolio',
-    description: 'Professional portfolio and personal website of Ethan Smadja, Software Engineer and Founder of VibeStack.',
+    description: 'Professional portfolio and personal website of Ethan Smadja, Software Engineer at Just.',
     url: 'https://ethansmadja.com',
     author: {
       '@type': 'Person',
@@ -92,33 +93,13 @@ export function ProfilePageJsonLd() {
     mainEntity: {
       '@type': 'Person',
       name: 'Ethan Smadja',
-      description: 'Software Engineer and Founder of VibeStack',
+      description: 'Software Engineer at Just',
       image: 'https://ethansmadja.com/profile.jpg',
       sameAs: [
         'https://www.linkedin.com/in/ethan-smadja/',
         'https://github.com/ethansmadja',
       ],
     },
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
-  );
-}
-
-export function OrganizationJsonLd() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'VibeStack',
-    founder: {
-      '@type': 'Person',
-      name: 'Ethan Smadja',
-    },
-    description: '1-on-1 coaching helping non-technical entrepreneurs go from idea to working product using AI.',
   };
 
   return (

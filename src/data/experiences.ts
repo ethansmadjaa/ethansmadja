@@ -10,28 +10,25 @@ export interface Experience {
 }
 export const experiences: Experience[] = [
   {
-    title: "Founder & AI Launch Coach",
-    company: "VibeStack",
+    title: "Software Engineer",
+    company: "Just",
     location: "Paris, France",
-    startDate: "Feb 2026",
+    startDate: "Mar 2026",
     endDate: "Present",
     description:
-      "1-on-1 coaching that helps non-technical entrepreneurs go from idea to working product using AI. One session, one full setup, one clear way to build.",
+      "Building products as a software engineer at Just (getjust.eu).",
     responsibilities: [
-      "Setting up complete development environments tailored to each founder's product",
-      "Teaching the right AI tools and workflows to build independently",
-      "Guiding founders from zero to a shippable MVP in a single session",
-      "Making tech startups accessible to anyone with an idea — not just those who code"
+      "Developing full-stack features across web and backend services",
+      "Shipping and maintaining production code",
+      "Collaborating with the team on architecture and product decisions"
     ],
     technologies: [
-      "Cursor",
-      "v0",
-      "Next.js",
-      "React",
       "TypeScript",
-      "Supabase",
-      "Vercel",
-      "AI/LLM Tools"
+      "React",
+      "Next.js",
+      "Node.js",
+      "Python",
+      "PostgreSQL"
     ]
   },
   {

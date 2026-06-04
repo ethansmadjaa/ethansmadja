@@ -1,6 +1,6 @@
 # Ethan Smadja - Portfolio Website
 
-> Personal portfolio and professional website of Ethan Smadja, a Software Engineer and Founder of VibeStack.
+> Personal portfolio and professional website of Ethan Smadja, a Software Engineer at Just.
 
 ## About This Site
 
@@ -9,7 +9,7 @@ This website showcases the professional work, skills, and experience of Ethan Sm
 ## Site Owner
 
 - Name: Ethan Smadja
-- Role: Software Engineer, Founder of VibeStack
+- Role: Software Engineer at Just
 - Location: France
 - Website: https://ethansmadja.com
 - Email: ethan@smadja.biz
@@ -18,8 +18,8 @@ This website showcases the professional work, skills, and experience of Ethan Sm
 
 ## Current Work
 
-### VibeStack (Founder & AI Launch Coach)
-1-on-1 coaching that helps non-technical entrepreneurs go from idea to working product using AI. One session, one full setup, one clear way to build.
+### Just (Software Engineer, since Mar 2026)
+Building full-stack, AI-powered products across web and backend at Just (getjust.eu).
 
 ### Freelance Software Engineering
 Providing full-stack development services, specializing in web applications, AI integration, and modern frontend development.

@@ -70,14 +70,14 @@ export function HomeContent() {
                 delay={0.5}
                 className="mt-2 sm:mt-4 text-xl sm:text-2xl md:text-3xl text-muted-foreground"
               >
-                Software Engineer & Founder of VibeStack
+                Software Engineer @ Just
               </AnimatedDiv>
               <AnimatedDiv 
                 variant={fadeInUp}
                 delay={0.7}
                 className="mx-auto mt-4 max-w-[700px] text-base sm:text-lg md:text-xl text-muted-foreground"
               >
-                I help non-technical founders turn ideas into real products using AI.
+                I build AI-powered products, web and mobile, from idea to production.
               </AnimatedDiv>
               <AnimatedDiv 
                 variant={fadeInUp}
@@ -90,7 +90,7 @@ export function HomeContent() {
                     size="lg"
                     className="text-base px-8 bg-[#00A] hover:bg-[#0077cc] text-white"
                   >
-                    <Link href="/contact">Launch Your product Today</Link>
+                    <Link href="/contact">Get in Touch</Link>
                   </Button>
                 </AnimatedButton>
                 <AnimatedButton>
